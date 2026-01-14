@@ -1,0 +1,669 @@
+# IMEX Website Development Prompt - Complete Replit Implementation
+
+## Project Brief
+Build a premium, high-budget website for IMEX - a China-based furniture import/export company specializing in complete project solutions for hotels, hospitals, villas, and commercial spaces. The website must showcase luxury, professionalism, and international expertise through advanced React Spring parallax effects.
+
+## Company Details
+- **Name:** IMEX (Division of IMEXAO - 利华盛贸易有限公司)
+- **Tagline:** "WE MAKE YOUR PLACE BETTER THAN OTHERS" 
+- **Business:** Global furniture sourcing from China, complete project furnishing
+- **Locations:** Chennai & Madurai (India), Foshan (China)
+- **Target Markets:** Hotels, hospitals, villas, apartments, commercial spaces
+
+## Technical Requirements for Replit
+
+### Replit Environment Setup
+```bash
+# Use Replit's React + Vite template
+# Install dependencies via Replit's Package Manager or:
+npm install @react-spring/web framer-motion react-intersection-observer react-router-dom @tanstack/react-query tailwindcss styled-components lucide-react react-hook-form @types/react @types/react-dom
+```
+
+### Core Technology Stack (Replit Optimized)
+```json
+{
+  "build_tool": "Vite (Replit default)",
+  "frontend": {
+    "framework": "React 18 + TypeScript",
+    "animations": "React Spring (advanced parallax)",
+    "styling": "Tailwind CSS + Styled Components", 
+    "routing": "React Router v6",
+    "state": "React Query + Context API",
+    "performance": "React.lazy, Intersection Observer"
+  },
+  "replit_config": {
+    "run_command": "npm run dev",
+    "build_command": "npm run build",
+    "port": 3000,
+    "environment": "Node.js"
+  }
+}
+```
+
+### Replit File Structure
+```
+project-root/
+├── public/
+│   ├── images/
+│   │   ├── hero-building.jpg
+│   │   ├── about-us.jpg
+│   │   └── ... (all IMEX images)
+│   └── index.html
+├── src/
+│   ├── components/ (as detailed below)
+│   ├── pages/
+│   ├── hooks/
+│   ├── utils/
+│   ├── styles/
+│   └── App.tsx
+├── package.json
+├── vite.config.ts
+├── tailwind.config.js
+├── tsconfig.json
+└── .replit
+```
+
+### Animation Requirements
+- **Hero Parallax:** Building background moves at 0.5x scroll speed, overlay at 0.2x
+- **Section Reveals:** Staggered animations using useTrail with 200ms delays
+- **Process Timeline:** Chained animations (road drawing → steps appearing)
+- **Portfolio Gallery:** Masonry layout with hover transformations
+- **Smooth Scrolling:** Custom scroll behavior with momentum
+
+## Complete Page Structure
+
+### 1. Hero Section - "Architectural Excellence"
+```typescript
+// Requirements:
+- Full-screen modern building background with red geometric overlay
+- Parallax scrolling effect (building slower than content)
+- Animated IMEX logo entrance
+- CTA buttons: "Start Your Project" and "View Portfolio"
+- Responsive typography scaling
+- Smooth scroll indicator
+```
+
+### 2. About Us - "Global Expertise" 
+```typescript
+// Content Structure:
+- Company introduction with mission/vision
+- 15+ years experience highlight
+- Three core values with icons (Vision, Mission, Team Pride)
+- Statistics counter animation
+- "Bringing Creative Interiors Into Life" tagline
+- Side-by-side layout with imagery
+```
+
+### 3. Why Choose Us - "Ocean of Experience"
+```typescript
+// Features Grid (8 services):
+1. Product Sourcing
+2. Factory/Wholesale Market Assistance  
+3. Product Purchasing
+4. Shipping To Your Destination
+5. Import & Clearing
+6. Door Step Delivery
+7. Warehousing & Consolidation Services
+8. Installation & Maintenance
+
+// Visual: Cargo ship background with floating service cards
+```
+
+### 4. Process Timeline - "Journey Roadmap"
+```typescript
+// 8-Step Animated Process:
+1. Discuss Your Project → Requirements & Budget
+2. Our Service Offering → Tailored Product List  
+3. China Visit → Planning & Total Assistance
+4. Purchasing → Expert Guidance
+5. Quality Check → A-Level Inspection
+6. Consolidation Loading → Secure Storage
+7. Shipping & Customs → Complete Process
+8. Installation & Maintenance → Complete Service
+
+// Animation: SVG road path drawing + sequential step reveals
+```
+
+### 5. Project Portfolio - "Excellence Showcase"
+```typescript
+// Six Main Categories with Detailed Product Lists:
+
+interface ProjectCategory {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  products: ProductCategory[];
+}
+
+// Hotel Projects
+{
+  "rooms": ["Bed", "Mattress", "Side Table", "Wardrobe", "TV Unit", "Chair"],
+  "restaurants": ["Dining Tables", "Chairs", "Curtain", "Chandelier"],  
+  "banquet": ["Reception Table", "Conference Chairs", "Stage Equipment"]
+}
+
+// Hospital Projects  
+{
+  "medical": ["Hospital Bed", "Surgical Cap", "Medicine Trolley"],
+  "canteen": ["Tables", "Chairs", "Kitchen Setup"],
+  "facilities": ["Garden Equipment", "Wash Basin", "CCTV Cameras"]
+}
+
+// Villa/Apartment Projects
+{
+  "living": ["Sofa", "Coffee Table", "TV Unit", "Carpet"],
+  "bedroom": ["King/Queen Bed", "Wardrobe", "Reading Chair"],
+  "kitchen": ["Modular Setup", "Serving Table", "Storage"]
+}
+
+// Commercial Projects
+{
+  "outlets": ["Display Furniture", "Lighting", "Decorative Items"],
+  "institutes": ["Smart Class Room", "Office Furniture", "Projectors"],
+  "common": ["Entrance Decoration", "Fountains", "Landscape"]
+}
+```
+
+### 6. China Market Showcase
+```typescript
+// Interactive Market Gallery:
+const chinaMarkets = [
+  "Louvre Furniture Mall - Foshan Shunde",
+  "Red Star Macalline Furniture Mall", 
+  "S-Lighting Mall - Guzhen Zhongshan",
+  "Foshan Ceramic Art Market",
+  "House Keeping & Household - Yiwu Mall",
+  "Marble Market - Yunfu",
+  "Futian Market - Yiwu",
+  "Medical Equipment Market - Guangzhou"
+];
+
+// Features: Location pins, market photos, specialty descriptions
+```
+
+### 7. Contact & Locations
+```typescript
+// Three Office Locations:
+const offices = [
+  {
+    city: "Chennai, India",
+    address: "B.R Rayala Towers - III, 158, Anna Salai, Chennai - 600 002",
+    phones: ["+91 98431 10585", "+91 44 25508452"]
+  },
+  {
+    city: "Madurai, India", 
+    address: "No. 82, Nethaji Road, Bypass Street, Madurai, TamilNadu - 625 020",
+    phones: ["+91 98420 33807", "+91 0452 4318072"]
+  },
+  {
+    city: "Foshan, China",
+    address: "DeYi Commercial Building, 4th Construction Road, 2nd Floor, Lecong Town, Shunde, Foshan, Guangdong - 528 315",
+    phones: ["+86 18689244807", "+86 13217573736"]
+  }
+];
+```
+
+## Design System Implementation
+
+### Color Palette
+```scss
+:root {
+  --primary-red: #E31E24;
+  --secondary-gray: #2C2C2C;
+  --accent-white: #FFFFFF;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --background-light: #F8F9FA;
+  --border-light: #E5E5E5;
+}
+```
+
+### Typography Scale
+```scss
+.text-display { font-size: 4rem; font-weight: 800; line-height: 1.1; }
+.text-h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; }
+.text-h2 { font-size: 2.25rem; font-weight: 600; line-height: 1.3; }
+.text-h3 { font-size: 1.875rem; font-weight: 600; line-height: 1.4; }
+.text-body-lg { font-size: 1.125rem; line-height: 1.6; }
+.text-body { font-size: 1rem; line-height: 1.6; }
+.text-small { font-size: 0.875rem; line-height: 1.5; }
+```
+
+### Component Architecture
+```typescript
+// Reusable Components Structure:
+components/
+├── ui/
+│   ├── Button.tsx
+│   ├── Card.tsx
+│   ├── Container.tsx
+│   └── Typography.tsx
+├── layout/
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   └── Navigation.tsx
+├── sections/
+│   ├── HeroSection.tsx
+│   ├── AboutSection.tsx
+│   ├── ServicesSection.tsx
+│   ├── ProcessSection.tsx
+│   ├── PortfolioSection.tsx
+│   └── ContactSection.tsx
+├── animations/
+│   ├── ParallaxContainer.tsx
+│   ├── ScrollReveal.tsx
+│   ├── ProcessTimeline.tsx
+│   └── ImageGallery.tsx
+└── features/
+    ├── ProjectCalculator.tsx
+    ├── ContactForm.tsx
+    └── LanguageSwitcher.tsx
+```
+
+## Advanced React Spring Implementation
+
+### Hero Parallax Effect
+```typescript
+function HeroSection() {
+  const [{ scrollY }, setScrollY] = useSpring(() => ({ scrollY: 0 }));
+  
+  useEffect(() => {
+    const handleScroll = () => setScrollY({ scrollY: window.scrollY });
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const buildingTransform = scrollY.to(y => `translate3d(0, ${y * 0.5}px, 0)`);
+  const overlayTransform = scrollY.to(y => `translate3d(0, ${y * 0.2}px, 0)`);
+  const contentOpacity = scrollY.to([0, 300], [1, 0]);
+
+  return (
+    <div className="relative h-screen overflow-hidden">
+      <animated.div 
+        className="absolute inset-0 will-change-transform"
+        style={{ transform: buildingTransform }}
+      >
+        <img 
+          src="/images/hero-building.jpg" 
+          alt="Luxury Modern Building"
+          className="w-full h-full object-cover"
+        />
+      </animated.div>
+      
+      <animated.div 
+        className="absolute inset-0 bg-gradient-to-r from-red-600/80 to-transparent"
+        style={{ 
+          transform: overlayTransform,
+          opacity: contentOpacity 
+        }}
+      >
+        <div className="container mx-auto h-full flex items-center">
+          <div className="text-white max-w-2xl">
+            <h1 className="text-6xl font-bold mb-4">
+              WE MAKE YOUR PLACE
+              <span className="block text-yellow-300">BETTER THAN OTHERS</span>
+            </h1>
+            <p className="text-xl mb-8">Global Import, Export & Sourcing Partner</p>
+            <div className="flex gap-4">
+              <Button variant="primary" size="lg">Start Your Project</Button>
+              <Button variant="outline" size="lg">View Portfolio</Button>
+            </div>
+          </div>
+        </div>
+      </animated.div>
+    </div>
+  );
+}
+```
+
+### Process Timeline Animation
+```typescript
+function ProcessTimeline() {
+  const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
+  
+  const timelineRef = useSpringRef();
+  const stepsRef = useSpringRef();
+  
+  const roadAnimation = useSpring({
+    ref: timelineRef,
+    from: { strokeDashoffset: 2000 },
+    to: { strokeDashoffset: inView ? 0 : 2000 },
+    config: { duration: 2000 }
+  });
+
+  const stepsAnimation = useTrail(8, {
+    ref: stepsRef,
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0px) scale(1)' : 'translateY(50px) scale(0.8)',
+    config: { tension: 280, friction: 60 }
+  });
+
+  useChain(inView ? [timelineRef, stepsRef] : [], [0, 0.5]);
+
+  return (
+    <section ref={ref} className="py-20 bg-gray-50">
+      <div className="container mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-16">Our Process</h2>
+        
+        <div className="relative">
+          <svg className="absolute top-1/2 left-0 w-full h-2 -translate-y-1/2">
+            <animated.path
+              d="M50,50 Q200,20 400,50 T750,50 Q900,80 1200,50"
+              stroke="var(--primary-red)"
+              strokeWidth="4"
+              fill="none"
+              strokeDasharray="20 10"
+              style={roadAnimation}
+            />
+          </svg>
+          
+          <div className="grid grid-cols-4 gap-8 relative z-10">
+            {stepsAnimation.map((style, index) => (
+              <animated.div key={index} style={style}>
+                <ProcessStep 
+                  number={index + 1}
+                  title={processSteps[index].title}
+                  description={processSteps[index].description}
+                  icon={processSteps[index].icon}
+                />
+              </animated.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+```
+
+### Portfolio Gallery with Masonry Layout
+```typescript
+function PortfolioGallery({ projects }: { projects: Project[] }) {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [ref, inView] = useInView({ threshold: 0.2 });
+  
+  const filteredProjects = selectedCategory === 'all' 
+    ? projects 
+    : projects.filter(p => p.category === selectedCategory);
+
+  const transitions = useTransition(filteredProjects, {
+    from: { opacity: 0, transform: 'scale(0.9) translateY(40px)' },
+    enter: { opacity: 1, transform: 'scale(1) translateY(0px)' },
+    leave: { opacity: 0, transform: 'scale(0.9) translateY(-40px)' },
+    trail: 100,
+    config: { tension: 300, friction: 30 }
+  });
+
+  return (
+    <section className="py-20">
+      <div className="container mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-6">Project Portfolio</h2>
+          
+          <div className="flex justify-center gap-4 mb-8">
+            {categories.map(category => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-full transition-all ${
+                  selectedCategory === category.id
+                    ? 'bg-red-600 text-white'
+                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div ref={ref} className="masonry-grid">
+          {transitions((style, project) => (
+            <animated.div style={style}>
+              <ProjectCard 
+                project={project}
+                onView={() => openProjectModal(project)}
+              />
+            </animated.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+```
+
+## SEO & Performance Requirements
+
+### Meta Tags & Structured Data
+```html
+<title>IMEX - China Furniture Import | Hotel Hospital Villa Projects | Global Sourcing</title>
+<meta name="description" content="IMEX specializes in furniture import from China, complete project solutions for hotels, hospitals, villas. 15+ years experience in global sourcing and logistics from Foshan to India.">
+<meta name="keywords" content="china furniture import, hotel project furniture, hospital equipment sourcing, villa interior design, furniture wholesale china, foshan furniture market, india china trade">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "IMEX",
+  "alternateName": "IMEXAO",
+  "url": "https://imex.network",
+  "logo": "https://imex.network/logo.png",
+  "description": "Global Import, Export & Sourcing Partner specializing in furniture and equipment from China",
+  "foundingDate": "2008",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressCountry": "IN",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "streetAddress": "B.R Rayala Towers - III, 158, Anna Salai",
+      "postalCode": "600002"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressCountry": "CN", 
+      "addressLocality": "Foshan",
+      "addressRegion": "Guangdong",
+      "streetAddress": "DeYi Commercial Building, Lecong Town",
+      "postalCode": "528315"
+    }
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91-98431-10585",
+      "contactType": "customer service",
+      "areaServed": "IN"
+    },
+    {
+      "@type": "ContactPoint", 
+      "telephone": "+86-186-8924-4807",
+      "contactType": "customer service",
+      "areaServed": "CN"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/imex",
+    "https://www.linkedin.com/company/imex"
+  ]
+}
+</script>
+```
+
+### Replit Performance Considerations
+- **Replit Hosting Limits:** Optimize for Replit's server capabilities
+- **Core Web Vitals:** Target LCP < 3.5s (accounting for Replit hosting)
+- **Bundle Optimization:** Crucial code splitting due to Replit's bandwidth
+- **Image Hosting:** Use Replit's static file serving or external CDN
+- **Caching Strategy:** Implement service worker for Replit deployment
+
+### Replit-Specific Optimizations:
+```javascript
+// vite.config.ts for Replit
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: '0.0.0.0',
+    port: 3000
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          animations: ['@react-spring/web', 'framer-motion']
+        }
+      }
+    }
+  }
+})
+```
+
+## Advanced Features Implementation
+
+### Project Cost Calculator
+```typescript
+interface ProjectCalculation {
+  projectType: 'hotel' | 'hospital' | 'villa' | 'commercial';
+  area: number;
+  rooms: number;
+  budget: 'basic' | 'premium' | 'luxury';
+  location: 'india' | 'international';
+  timeline: number;
+}
+
+function ProjectCalculator() {
+  const [formData, setFormData] = useState<ProjectCalculation>();
+  const [estimate, setEstimate] = useState<number | null>(null);
+  
+  const calculateCost = (data: ProjectCalculation) => {
+    // Complex calculation based on project type, area, specifications
+    const baseCost = projectTypeCosts[data.projectType];
+    const areaCost = data.area * areaRates[data.budget];
+    const locationMultiplier = locationFactors[data.location];
+    
+    return (baseCost + areaCost) * locationMultiplier;
+  };
+
+  return (
+    <div className="bg-white rounded-lg shadow-lg p-8">
+      <h3 className="text-2xl font-bold mb-6">Get Project Estimate</h3>
+      {/* Multi-step form with smooth transitions */}
+    </div>
+  );
+}
+```
+
+### Multi-language Support
+```typescript
+// i18n Configuration
+const languages = {
+  en: {
+    hero: {
+      title: "WE MAKE YOUR PLACE BETTER THAN OTHERS",
+      subtitle: "Global Import, Export & Sourcing Partner",
+      cta1: "Start Your Project",
+      cta2: "View Portfolio"
+    }
+  },
+  zh: {
+    hero: {
+      title: "我们让您的空间与众不同",
+      subtitle: "全球进出口和采购合作伙伴", 
+      cta1: "开始您的项目",
+      cta2: "查看作品集"
+    }
+  }
+};
+```
+
+## Replit Development Implementation Steps
+
+### Phase 1: Replit Project Setup (Day 1-2)
+1. **Create Replit Project:**
+   - Use "React + Vite" template in Replit
+   - Enable "Always On" for 24/7 accessibility
+   
+2. **Install Dependencies via Replit Shell:**
+   ```bash
+   npm install @react-spring/web framer-motion react-intersection-observer react-router-dom @tanstack/react-query tailwindcss styled-components lucide-react react-hook-form
+   ```
+
+3. **Configure Replit Environment:**
+   - Update `.replit` file for proper port configuration
+   - Set up custom domain if needed
+   - Configure environment variables for production
+
+4. **Setup Development Environment:**
+   - Configure Tailwind CSS in `vite.config.ts`
+   - Create TypeScript configuration
+   - Set up ESLint and Prettier (optional in Replit)
+
+5. **File Structure Creation:**
+   - Create component library structure
+   - Set up routing configuration
+   - Implement design system tokens
+
+### Phase 2: Hero & Navigation (Day 3-4) 
+1. Build responsive navigation with smooth animations
+2. Implement hero parallax section with React Spring
+3. Add scroll indicators and smooth scrolling
+4. Create mobile hamburger menu
+5. Test cross-browser compatibility
+
+### Phase 3: Content Sections (Day 5-8)
+1. About Us section with animated counters
+2. Services grid with hover effects  
+3. Process timeline with chained animations
+4. Portfolio gallery with filtering
+5. China markets showcase
+
+### Phase 4: Advanced Features (Day 9-12)
+1. Project cost calculator
+2. Contact forms with validation
+3. Multi-language switching
+4. SEO optimization
+5. Performance optimization
+
+### Phase 5: Polish & Launch (Day 13-15)
+1. Mobile responsiveness testing
+2. Accessibility improvements
+3. Final animations polish
+4. Content management setup
+5. Deployment and domain setup
+
+## Quality Assurance Checklist
+
+### Functionality
+- [ ] All animations work smoothly at 60fps
+- [ ] Portfolio filtering works correctly
+- [ ] Contact forms submit successfully
+- [ ] Mobile navigation functions properly
+- [ ] Multi-language switching works
+- [ ] Cost calculator provides accurate estimates
+
+### Performance
+- [ ] Page loads in under 3 seconds
+- [ ] Images are optimized (WebP + lazy loading)
+- [ ] JavaScript bundle is code-split
+- [ ] Lighthouse score above 95
+- [ ] Core Web Vitals meet targets
+
+### Design
+- [ ] Matches provided visual references exactly
+- [ ] Consistent spacing and typography
+- [ ] Proper color contrast ratios
+- [ ] Responsive across all device sizes
+- [ ] Professional, luxury appearance
+
+### SEO & Accessibility
+- [ ] All images have alt text
+- [ ] Proper heading hierarchy (h1-h6)
+- [ ] Meta descriptions under 160 characters  
+- [ ] Structured data validates
+- [ ] WCAG 2.1 AA compliance
+- [ ] Keyboard navigation works
+
+This comprehensive prompt provides everything needed to build a world-class IMEX website that showcases luxury, professionalism, and technical excellence through advanced React Spring animations and modern web development practices.

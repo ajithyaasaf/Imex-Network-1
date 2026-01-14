@@ -1,0 +1,635 @@
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Building2,
+  CheckCircle2,
+  Send,
+  Globe,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useToast } from "@/hooks/use-toast";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "@/lib/firebase";
+import { useState } from "react";
+import bannerImage from "@assets/1_1765189672715.png";
+
+const contactFormSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  company: z.string().optional(),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(10, "Please enter a valid phone number"),
+  projectType: z.string().min(1, "Please select a project type"),
+  location: z.string().min(2, "Please enter project location"),
+  description: z
+    .string()
+    .min(10, "Please provide a brief description (minimum 10 characters)"),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
+
+const offices = [
+  {
+    id: 1,
+    city: "Chennai",
+    country: "India",
+    type: "Headquarters",
+    address: "No. 2, Royala Towers - III, 158, Anna Salai, Chennai - 600 002",
+    phones: ["+91 98421 10585", "+91 44 23506452"],
+    email: "skyimex1@gmail.com",
+    hours: "Mon-Sat: 9AM-6PM IST",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8411523694734!2d80.25423831482189!3d13.047985290802974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267a68e3f8b0f%3A0x3e1c8df1b78e8f8e!2sAnna%20Salai%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin",
+  },
+  {
+    id: 2,
+    city: "Madurai",
+    country: "India",
+    type: "Regional Office",
+    address: "No. 82, Melur Main Road Street, Madurai, Tamilnadu - 625 001",
+    phones: ["+91 88233 33807", "+91 0452 4382072"],
+    email: "skyimex1@gmail.com",
+    hours: "Mon-Sat: 9AM-6PM IST",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.7665894717595!2d78.11947631482006!3d9.925201292851234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b1189633%3A0xdc955b7264f63933!2sMadurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin",
+  },
+  {
+    id: 3,
+    city: "Foshan",
+    country: "China",
+    type: "Sourcing Hub",
+    address:
+      "DeYi Commercial Building, 4th Construction Road, 2nd Floor, Lecong Town, Shunde, Foshan, Guangdong - 528 315",
+    phones: ["+86 18689244807", "+86 13217573736"],
+    email: "skyimex1@gmail.com",
+    hours: "Mon-Sat: 9AM-6PM CST",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59540.89537726633!2d113.09399672167967!3d22.895828700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403fefbf5b0d6f7%3A0x1e1c8df1b78e8f8e!2sFoshan%2C%20Guangdong%20Province%2C%20China!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin",
+  },
+];
+
+export default function Contact() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      company: "",
+      email: "",
+      phone: "",
+      projectType: "",
+      location: "",
+      description: "",
+    },
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    setSubmitSuccess(false);
+
+    try {
+      if (!db) {
+        throw new Error(
+          "Database not initialized. Please complete Firebase setup.",
+        );
+      }
+
+      await addDoc(collection(db, "contactInquiries"), {
+        ...data,
+        status: "new",
+        createdAt: new Date(),
+      });
+
+      setSubmitSuccess(true);
+
+      toast({
+        title: "Thank you for your inquiry!",
+        description:
+          "We'll contact you within 24 hours to discuss your project.",
+      });
+
+      form.reset();
+
+      setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 5000);
+    } catch (error: any) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Submission Failed",
+        description:
+          error.message ||
+          "Unable to submit your inquiry. Please try calling us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main>
+        <section className="relative min-h-[60vh] flex items-center justify-center">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${bannerImage})` }}
+          />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="relative z-10">
+            <div className="container mx-auto px-6 py-24">
+              <div className="max-w-4xl mx-auto text-center text-white">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight">
+                  Get in Touch
+                </h1>
+                <p className="text-xl md:text-2xl opacity-95 leading-relaxed">
+                  Let's discuss your project and bring your vision to life
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a
+                  href="tel:+919842110585"
+                  className="group bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-imex-red hover:-translate-y-1"
+                  data-testid="link-call-us"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-imex-red to-red-700 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Phone className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-center text-gray-900">
+                    Call Us
+                  </h3>
+                  <p className="text-base font-semibold text-center text-imex-red group-hover:underline">
+                    +91 98421 10585
+                  </p>
+                  <p className="text-xs text-gray-500 text-center mt-2">
+                    Mon-Sat, 9AM-6PM IST
+                  </p>
+                </a>
+
+                <a
+                  href="mailto:skyimex1@gmail.com"
+                  className="group bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-imex-red hover:-translate-y-1"
+                  data-testid="link-email-us"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-imex-red to-red-700 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Mail className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-center text-gray-900">
+                    Email Us
+                  </h3>
+                  <p className="text-base font-semibold text-center text-imex-red group-hover:underline">
+                    skyimex1@gmail.com
+                  </p>
+                  <p className="text-xs text-gray-500 text-center mt-2">
+                    We reply within 24 hours
+                  </p>
+                </a>
+
+                <div
+                  className="group bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-imex-red hover:-translate-y-1"
+                  data-testid="card-business-hours"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-imex-red to-red-700 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Clock className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-center text-gray-900">
+                    Business Hours
+                  </h3>
+                  <p className="text-base font-semibold text-center text-imex-red">
+                    Mon - Sat
+                  </p>
+                  <p className="text-xs text-gray-500 text-center mt-2">
+                    9:00 AM - 6:00 PM IST
+                  </p>
+                </div>
+
+                <a
+                  href="https://www.imex.network"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-imex-red hover:-translate-y-1"
+                  data-testid="link-website"
+                >
+                  <div className="w-14 h-14 bg-gradient-to-br from-imex-red to-red-700 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Globe className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-center text-gray-900">
+                    Visit Website
+                  </h3>
+                  <p className="text-base font-semibold text-center text-imex-red group-hover:underline">
+                    www.imex.network
+                  </p>
+                  <p className="text-xs text-gray-500 text-center mt-2">
+                    Explore our global network
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="space-y-16">
+                <div className="max-w-2xl mx-auto">
+                  {submitSuccess ? (
+                    <div
+                      className="bg-white rounded-2xl p-10 shadow-xl border-2 border-green-500"
+                      data-testid="success-message"
+                    >
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-green-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                          <CheckCircle2 className="w-10 h-10 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                          Inquiry Received!
+                        </h3>
+                        <p className="text-gray-600 mb-6">
+                          Thank you for reaching out. Our team will review your
+                          project details and contact you within 24 hours.
+                        </p>
+                        <div className="bg-green-50 rounded-xl p-6 border border-green-200 mb-6">
+                          <p className="text-sm font-semibold text-gray-700 mb-3">
+                            What happens next?
+                          </p>
+                          <ul className="text-sm text-gray-600 space-y-2 text-left">
+                            <li className="flex items-start gap-2">
+                              <span className="text-green-600 mt-0.5">✓</span>
+                              <span>Our team reviews your requirements</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-green-600 mt-0.5">✓</span>
+                              <span>We prepare a customized proposal</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <span className="text-green-600 mt-0.5">✓</span>
+                              <span>
+                                You'll receive a call or email within 24 hours
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <Button
+                          onClick={() => setSubmitSuccess(false)}
+                          variant="outline"
+                          data-testid="button-submit-another"
+                        >
+                          Submit Another Inquiry
+                        </Button>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
+                      <div className="mb-8">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                          Send Us Your Project Details
+                        </h2>
+                        <p className="text-gray-600">
+                          Fill out the form below and we'll get back to you
+                          within 24 hours
+                        </p>
+                      </div>
+
+                      <Form {...form}>
+                        <form
+                          onSubmit={form.handleSubmit(onSubmit)}
+                          className="space-y-5"
+                          data-testid="contact-form"
+                        >
+                          <div className="grid md:grid-cols-2 gap-5">
+                            <FormField
+                              control={form.control}
+                              name="name"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel>Full Name *</FormLabel>
+                                  <FormControl>
+                                    <Input
+                                      placeholder="Your full name"
+                                      className="h-11 placeholder:text-slate-400 border-gray-300"
+                                      data-testid="input-name"
+                                      {...field}
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+
+                            <FormField
+                              control={form.control}
+                              name="company"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel>Company Name</FormLabel>
+                                  <FormControl>
+                                    <Input
+                                      placeholder="Company name"
+                                      className="h-11 placeholder:text-slate-400 border-gray-300"
+                                      data-testid="input-company"
+                                      {...field}
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
+
+                          <div className="grid md:grid-cols-2 gap-5">
+                            <FormField
+                              control={form.control}
+                              name="email"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel>Email Address *</FormLabel>
+                                  <FormControl>
+                                    <Input
+                                      type="email"
+                                      placeholder="your@email.com"
+                                      className="h-11 placeholder:text-slate-400 border-gray-300"
+                                      data-testid="input-email"
+                                      {...field}
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+
+                            <FormField
+                              control={form.control}
+                              name="phone"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel>Phone Number *</FormLabel>
+                                  <FormControl>
+                                    <Input
+                                      type="tel"
+                                      placeholder="+91 XXXXX XXXXX"
+                                      className="h-11 placeholder:text-slate-400 border-gray-300"
+                                      data-testid="input-phone"
+                                      {...field}
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
+
+                          <div className="grid md:grid-cols-2 gap-5">
+                            <FormField
+                              control={form.control}
+                              name="projectType"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel>Project Type *</FormLabel>
+                                  <Select
+                                    onValueChange={field.onChange}
+                                    value={field.value}
+                                  >
+                                    <FormControl>
+                                      <SelectTrigger
+                                        className="h-11 border-gray-300"
+                                        data-testid="select-project-type"
+                                      >
+                                        <SelectValue placeholder="Select project type" />
+                                      </SelectTrigger>
+                                    </FormControl>
+                                    <SelectContent>
+                                      <SelectItem value="hospital">
+                                        Hospital Projects
+                                      </SelectItem>
+                                      <SelectItem value="hotel">
+                                        Hotel & Resort Projects
+                                      </SelectItem>
+                                      <SelectItem value="villa">
+                                        Villa & Apartment Developments
+                                      </SelectItem>
+                                      <SelectItem value="institute">
+                                        Institutes & Corporate Spaces
+                                      </SelectItem>
+                                      <SelectItem value="retail">
+                                        Branded Retail Outlets
+                                      </SelectItem>
+                                      <SelectItem value="other">
+                                        Other Projects
+                                      </SelectItem>
+                                    </SelectContent>
+                                  </Select>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+
+                            <FormField
+                              control={form.control}
+                              name="location"
+                              render={({ field }) => (
+                                <FormItem>
+                                  <FormLabel>Project Location *</FormLabel>
+                                  <FormControl>
+                                    <Input
+                                      placeholder="City, Country"
+                                      className="h-11 placeholder:text-slate-400 border-gray-300"
+                                      data-testid="input-location"
+                                      {...field}
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              )}
+                            />
+                          </div>
+
+                          <FormField
+                            control={form.control}
+                            name="description"
+                            render={({ field }) => (
+                              <FormItem>
+                                <FormLabel>Project Description *</FormLabel>
+                                <FormControl>
+                                  <Textarea
+                                    rows={4}
+                                    placeholder="Describe your project, timeline, and budget..."
+                                    className="resize-none placeholder:text-slate-400 border-gray-300"
+                                    data-testid="textarea-description"
+                                    {...field}
+                                  />
+                                </FormControl>
+                                <FormMessage />
+                              </FormItem>
+                            )}
+                          />
+
+                          <Button
+                            type="submit"
+                            className="w-full h-12 bg-imex-red hover:bg-red-700 text-white text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all"
+                            disabled={isSubmitting}
+                            data-testid="button-submit-inquiry"
+                          >
+                            {isSubmitting ? (
+                              <span className="flex items-center gap-2">
+                                <svg
+                                  className="animate-spin h-5 w-5"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <circle
+                                    className="opacity-25"
+                                    cx="12"
+                                    cy="12"
+                                    r="10"
+                                    stroke="currentColor"
+                                    strokeWidth="4"
+                                  ></circle>
+                                  <path
+                                    className="opacity-75"
+                                    fill="currentColor"
+                                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                  ></path>
+                                </svg>
+                                Submitting...
+                              </span>
+                            ) : (
+                              <span className="flex items-center gap-2">
+                                <Send className="w-4 h-4" />
+                                Submit Inquiry
+                              </span>
+                            )}
+                          </Button>
+
+                          <p className="text-xs text-center text-gray-500">
+                            By submitting this form, you agree to be contacted
+                            about your project
+                          </p>
+                        </form>
+                      </Form>
+                    </div>
+                  )}
+                </div>
+
+                <div>
+                  <div className="mb-8 text-center">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                      Locations
+                    </h2>
+                    <p className="text-gray-600">
+                      Visit us or reach out to the office nearest to you
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {offices.map((office) => (
+                      <div
+                        key={office.id}
+                        className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"
+                        data-testid={`office-${office.id}`}
+                      >
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-10 h-10 bg-gradient-to-br from-imex-red to-red-700 rounded-lg flex items-center justify-center">
+                            <Building2 className="w-5 h-5 text-white" />
+                          </div>
+                          <div>
+                            <p className="text-xs text-imex-red font-semibold uppercase tracking-wide mb-1">
+                              {office.type}
+                            </p>
+                            <h3 className="text-xl font-bold text-gray-900">
+                              {office.city}, {office.country}
+                            </h3>
+                          </div>
+                        </div>
+
+                        <div className="space-y-3 mb-5">
+                          <p className="text-sm text-gray-600 leading-relaxed flex items-start gap-2">
+                            <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-gray-400" />
+                            <span>{office.address}</span>
+                          </p>
+
+                          <div className="flex items-center gap-2 text-sm text-gray-600">
+                            <Clock className="w-4 h-4 flex-shrink-0 text-gray-400" />
+                            <span>{office.hours}</span>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-3 mb-4">
+                          <a
+                            href={`tel:${office.phones[0].replace(/\s/g, "")}`}
+                            className="flex-1 flex items-center justify-center gap-2 bg-imex-red text-white hover:bg-red-700 py-2.5 px-4 rounded-lg transition-colors font-medium text-sm"
+                            data-testid={`phone-${office.id}-0`}
+                          >
+                            <Phone className="w-4 h-4" />
+                            Call
+                          </a>
+
+                          <a
+                            href={`mailto:${office.email}`}
+                            className="flex-1 flex items-center justify-center gap-2 bg-gray-100 text-gray-900 hover:bg-gray-200 py-2.5 px-4 rounded-lg transition-colors font-medium text-sm"
+                            data-testid={`email-${office.id}`}
+                          >
+                            <Mail className="w-4 h-4" />
+                            Email
+                          </a>
+                        </div>
+
+                        <iframe
+                          src={office.mapUrl}
+                          width="100%"
+                          height="250"
+                          style={{ border: 0 }}
+                          allowFullScreen={true}
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                          title={`Map of ${office.city}`}
+                          data-testid={`map-${office.id}`}
+                        ></iframe>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
