@@ -1,4 +1,4 @@
-import { type ChatMessage } from "@shared/schema";
+import { type ChatMessage } from "../shared/schema";
 import { randomUUID } from "crypto";
 
 // Knowledge base for IMEX company
