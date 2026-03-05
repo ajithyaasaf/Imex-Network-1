@@ -106,8 +106,8 @@ export default function Header() {
               src={logoPath}
               alt="IMEX - A Division of IMEXAO - Connecting Globally"
               className={`w-auto object-contain transition-all duration-300 ${isScrolled
-                  ? "h-12 sm:h-14 md:h-16"
-                  : "h-16 sm:h-20 md:h-24"
+                ? "h-12 sm:h-14 md:h-16"
+                : "h-16 sm:h-20 md:h-24"
                 }`}
             />
           </div>
