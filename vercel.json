@@ -3,6 +3,10 @@
   "outputDirectory": "dist/public",
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/api/index"
+    },
+    {
       "src": "/assets/(.*)",
       "dest": "/assets/$1"
     },
