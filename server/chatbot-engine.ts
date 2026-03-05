@@ -1,5 +1,14 @@
-import { type ChatMessage } from "../shared/schema";
 import { randomUUID } from "crypto";
+
+// Inline type to avoid importing from shared/schema (which pulls in drizzle-orm)
+interface ChatMessage {
+  id: string;
+  role: "user" | "bot";
+  content: string;
+  timestamp: number;
+  quickReplies?: string[];
+}
+
 
 // Knowledge base for IMEX company
 interface FAQItem {
