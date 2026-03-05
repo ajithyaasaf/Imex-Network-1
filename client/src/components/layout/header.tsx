@@ -94,9 +94,8 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black/95 backdrop-blur-md shadow-lg" : "bg-black/90"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#0d1215]/95 backdrop-blur-md shadow-lg" : "bg-[#0d1215]"
+        }`}
       data-testid="header-navigation"
     >
       <nav className="container mx-auto px-4 sm:px-6 py-3 md:py-4">
@@ -106,7 +105,10 @@ export default function Header() {
             <img
               src={logoPath}
               alt="IMEX - A Division of IMEXAO - Connecting Globally"
-              className="h-14 sm:h-16 md:h-18 w-auto object-contain"
+              className={`w-auto object-contain transition-all duration-300 ${isScrolled
+                  ? "h-12 sm:h-14 md:h-16"
+                  : "h-16 sm:h-20 md:h-24"
+                }`}
             />
           </div>
 
@@ -211,11 +213,10 @@ export default function Header() {
                       <Link
                         href={item.href}
                         onClick={() => setIsMenuOpen(false)}
-                        className={`block py-4 px-6 text-2xl font-bold transition-all duration-300 rounded-xl ${
-                          isActive(item.href)
-                            ? "text-white bg-imex-red shadow-lg shadow-imex-red/50"
-                            : "text-gray-300 hover:text-white hover:bg-white/10"
-                        }`}
+                        className={`block py-4 px-6 text-2xl font-bold transition-all duration-300 rounded-xl ${isActive(item.href)
+                          ? "text-white bg-imex-red shadow-lg shadow-imex-red/50"
+                          : "text-gray-300 hover:text-white hover:bg-white/10"
+                          }`}
                         data-testid={item.testId}
                       >
                         {item.label}
