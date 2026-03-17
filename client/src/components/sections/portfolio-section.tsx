@@ -59,8 +59,8 @@ export default function PortfolioSection() {
             A Portfolio of Executed Visions
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            IMEX has the expertise to deliver projects of any scale, across multiple industries. 
-            From hospitals to hotels, villas to retail outlets—we transform visions into reality 
+            IMEX has the expertise to deliver projects of any scale, across multiple industries.
+            From hospitals to hotels, villas to retail outlets—we transform visions into reality
             with precision, quality, and unwavering commitment.
           </p>
         </div>

@@ -14,7 +14,7 @@ export default function Header() {
 
   const isActive = (path: string) => location === path;
 
-  const darkHeroPages = ["/services", "/who-we-are", "/portfolio", "/clients", "/contact"];
+  const darkHeroPages = ["/services", "/who-we-are", "/clients", "/contact"];
   const needsWhiteText = darkHeroPages.includes(location);
 
   const getTextColor = () => {
@@ -87,7 +87,7 @@ export default function Header() {
     { href: "/", label: "Home", testId: "mobile-nav-home" },
     { href: "/who-we-are", label: "Who We Are", testId: "mobile-nav-about" },
     { href: "/services", label: "Services", testId: "mobile-nav-services" },
-    { href: "/portfolio", label: "Portfolio", testId: "mobile-nav-portfolio" },
+    // { href: "/portfolio", label: "Portfolio", testId: "mobile-nav-portfolio" },
     { href: "/clients", label: "Clients", testId: "mobile-nav-clients" },
     { href: "/contact", label: "Contact", testId: "mobile-nav-contact" },
   ];
@@ -135,13 +135,13 @@ export default function Header() {
             >
               Process
             </Link>
-            <Link
+            {/* <Link
               href="/portfolio"
               className={`text-sm lg:text-base transition-colors hover:text-imex-red ${isActive("/portfolio") ? "font-semibold !text-imex-red" : getTextColor()}`}
               data-testid="nav-portfolio"
             >
               Portfolio
-            </Link>
+            </Link> */}
             <Link
               href="/clients"
               className={`text-sm lg:text-base transition-colors hover:text-imex-red ${isActive("/clients") ? "font-semibold !text-imex-red" : getTextColor()}`}

@@ -1,7 +1,6 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import ProcessSection from "@/components/sections/process-section";
-import MarketsSection from "@/components/sections/markets-section";
 import CulturalBridgeSection from "@/components/sections/cultural-bridge-section";
 import AchievementsSection from "@/components/sections/achievements-section";
 import bannerImage from "@assets/1_1765189672715.png";
@@ -56,7 +55,7 @@ export default function WhoWeAre() {
                 Who We Are
               </motion.h1>
               <motion.p variants={fadeInUp} className="text-xl md:text-2xl opacity-90 leading-relaxed font-light">
-                Discover the passion, expertise, and global vision that drives IMEX forward
+                Built on 19 years of expertise, IMEX bridges global supply gaps with comprehensive sourcing, quality-driven procurement, and end-to-end trade solutions.
               </motion.p>
             </motion.div>
           </div>
@@ -186,7 +185,6 @@ export default function WhoWeAre() {
         <AchievementsSection />
         <CulturalBridgeSection />
         <ProcessSection />
-        <MarketsSection />
       </main>
       <Footer />
     </div>

@@ -65,15 +65,14 @@ export default function AboutSection({ hideVideoSection = false }: AboutSectionP
                 <br />
                 We're Your Partners in Creation
               </h2>
-              <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                IMEX was founded on a simple yet powerful vision: to transform the
-                complex world of international sourcing into a seamless,
-                transparent experience. We recognized the challenges businesses
-                face—lack of transparency, quality control issues, and unreliable
-                partnerships. That's why we built IMEX: to be the bridge you can
-                trust, the partner who absorbs complexity so you can focus on your
-                vision.
-              </p>
+              <div className="max-w-4xl mx-auto">
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                  We started <span className="text-imex-red font-semibold">IMEX</span> with one goal: to make international sourcing easy for everyone.
+                </p>
+                <p className="mt-4 text-lg text-gray-500 leading-relaxed">
+                  We know how difficult it can be to find reliable partners and keep quality high. That’s why we handle all the hard parts of importing—so you can focus on growing your business with confidence.
+                </p>
+              </div>
             </div>
 
             <div className="max-w-5xl mx-auto">
@@ -208,11 +207,10 @@ export default function AboutSection({ hideVideoSection = false }: AboutSectionP
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 A Commitment to Timeless Quality
               </h3>
-              <p className="text-gray-600 leading-relaxed text-left md:text-justify max-w-md mx-auto">
-                We don't just source products—we source durable, high-quality
-                solutions that provide long-term value. Every item is selected
-                with your success and satisfaction in mind, ensuring timeless
-                excellence that stands the test of time.
+              <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
+                We provide high-quality items that are built to last.
+                Every product we source is chosen to help your business
+                succeed and provide the best value for your money.
               </p>
             </motion.div>
 
@@ -228,11 +226,10 @@ export default function AboutSection({ hideVideoSection = false }: AboutSectionP
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 A Commitment to Seamless Execution
               </h3>
-              <p className="text-gray-600 leading-relaxed text-left md:text-justify max-w-md mx-auto">
-                Global trade is complex, but your experience shouldn't be. Our
-                team absorbs all the complexities—from sourcing to delivery—so
-                you enjoy a stress-free, efficient, and perfectly executed
-                project every single time.
+              <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
+                Buying from overseas is often hard, but we make it easy.
+                Our team handles everything from finding products to final
+                delivery, so you have a stress-free experience.
               </p>
             </motion.div>
 
@@ -248,11 +245,10 @@ export default function AboutSection({ hideVideoSection = false }: AboutSectionP
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 A Commitment to Unwavering Partnership
               </h3>
-              <p className="text-gray-600 leading-relaxed text-left md:text-justify max-w-md mx-auto">
-                Your goals are our goals. We're dedicated to customer delight
-                through sound advice, proactive communication, and being a
-                reliable partner through every phase of your project—from
-                concept to completion.
+              <p className="text-gray-600 leading-relaxed max-w-md mx-auto">
+                Your success is our priority. We offer honest advice
+                and keep you updated every step of the way. We are
+                your trusted partner from start to finish.
               </p>
             </motion.div>
           </div>

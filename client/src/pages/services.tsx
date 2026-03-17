@@ -15,9 +15,12 @@ import {
   Hotel,
   Home,
   Building2,
-  CheckCircle2,
-  Plane,
   CheckCircle,
+  Clock,
+  TrendingDown,
+  Lightbulb,
+  Plane,
+  CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ui/scroll-reveal";
@@ -162,7 +165,7 @@ export default function Services() {
             <ScrollReveal>
               <div className="text-center mb-20">
                 <h2 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-                  The IMEX Journey
+                  The IMEX-Process Chart
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                   Follow the path from sourcing to installation—every checkpoint
@@ -397,30 +400,28 @@ export default function Services() {
               {[
                 {
                   title: "Time Saved",
-                  value: "60%",
+                  icon: Clock,
                   desc: "Faster project completion",
                   color: "from-imex-red to-red-600",
                 },
                 {
                   title: "Cost Reduction",
-                  value: "40%",
+                  icon: TrendingDown,
                   desc: "Lower procurement costs",
                   color: "from-imex-red to-red-600",
                 },
                 {
                   title: "Quality Assurance",
-                  value: "100%",
+                  icon: Lightbulb,
                   desc: "Guaranteed satisfaction",
                   color: "from-imex-red to-red-600",
                 },
               ].map((impact, idx) => (
                 <ScrollReveal key={idx} delay={idx * 100}>
                   <div className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-700">
-                    <div
-                      className={`text-6xl font-bold bg-gradient-to-br ${impact.color} bg-clip-text text-transparent mb-4`}
-                    >
-                      {impact.value}
-                    </div>
+                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl w-20 h-20 flex items-center justify-center mb-6 shadow-inner group">
+                    <impact.icon className={`w-10 h-10 text-imex-red transform transition-transform group-hover:scale-110 duration-300`} />
+                  </div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       {impact.title}
                     </h3>

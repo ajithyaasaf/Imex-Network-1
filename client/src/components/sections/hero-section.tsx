@@ -76,8 +76,8 @@ export default function HeroSection() {
         <div
           key={slide.id}
           className={`absolute inset-0 transition-all duration-700 ease-in-out ${index === currentSlide
-              ? "opacity-100 scale-100"
-              : "opacity-0 scale-105"
+            ? "opacity-100 scale-100"
+            : "opacity-0 scale-105"
             }`}
         >
           {/* Background Image */}
@@ -98,8 +98,8 @@ export default function HeroSection() {
               <div
                 key={slide.id}
                 className={`transition-all duration-700 ${index === currentSlide
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8 absolute pointer-events-none"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8 absolute pointer-events-none"
                   }`}
               >
                 {/* Subtitle Badge */}
