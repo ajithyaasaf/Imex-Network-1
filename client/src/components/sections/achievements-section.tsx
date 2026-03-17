@@ -37,7 +37,7 @@ export default function AchievementsSection() {
     },
     {
       icon: Globe2,
-      number: "50+",
+      number: "15+",
       label: "Countries Served",
       color: "from-green-400 to-emerald-500"
     },

@@ -50,7 +50,7 @@ export default function StatsSection() {
             className="bg-white/40 backdrop-blur-md rounded-xl md:rounded-2xl p-4 md:p-6 border border-white/30 shadow-lg hover:bg-white/60 hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02]"
             data-testid="stat-countries"
           >
-            <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold text-imex-red mb-2">50+</h4>
+            <h4 className="text-2xl md:text-3xl lg:text-4xl font-bold text-imex-red mb-2">15+</h4>
             <p className="text-sm md:text-base text-gray-600">Countries Served</p>
           </div>
 

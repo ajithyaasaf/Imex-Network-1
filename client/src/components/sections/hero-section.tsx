@@ -27,10 +27,10 @@ const slides = [
   {
     id: 3,
     image: heroImage3,
-    subtitle: "Healthcare & Hospitality",
-    title: "Premium Sourcing",
-    highlight: "Solutions",
-    description: "Specialized sourcing for hospitals, hotels, and commercial spaces with quality and durability.",
+    subtitle: "Global Sourcing & Logistics",
+    title: "Materials for Every",
+    highlight: "Industry",
+    description: "We source and deliver high-quality materials and equipment for hotels, villas, apartments, and industrial projects worldwide.",
   },
 ];
 
