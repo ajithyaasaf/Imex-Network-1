@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <footer className="bg-imex-gray text-white py-16" data-testid="footer">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
             <div className="mb-6">
@@ -73,17 +73,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Markets */}
-          <div>
-            <h4 className="text-xl font-semibold mb-6">Target Markets</h4>
-            <ul className="space-y-3 text-gray-300">
-              <li data-testid="market-hotels">Hotels & Resorts</li>
-              <li data-testid="market-hospitals">Hospitals & Healthcare</li>
-              <li data-testid="market-villas">Villas & Apartments</li>
-              <li data-testid="market-commercial">Commercial Spaces</li>
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h4 className="text-xl font-semibold mb-6">Contact Info</h4>
@@ -108,11 +97,12 @@ export default function Footer() {
                   +91 98421 10585
                 </a>
               </div>
-              <div className="flex items-center">
-                <Globe className="w-5 h-5 text-imex-red mr-3" />
-                <span data-testid="footer-locations">
-                  Chennai | Madurai | Foshan
-                </span>
+              <div className="flex items-start">
+                <Globe className="w-5 h-5 text-imex-red mr-3 mt-1" />
+                <div className="space-y-1" data-testid="footer-locations">
+                  <p>India - Chennai/Madurai</p>
+                  <p>China - Foshan</p>
+                </div>
               </div>
             </div>
           </div>

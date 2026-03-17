@@ -71,7 +71,7 @@ export default function ContactSection() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  
+
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -88,27 +88,27 @@ export default function ContactSection() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     setSubmitSuccess(false);
-    
+
     try {
       if (!db) {
         throw new Error("Database not initialized. Please complete Firebase setup.");
       }
-      
+
       await addDoc(collection(db, "contactInquiries"), {
         ...data,
         status: "new",
         createdAt: new Date(),
       });
-      
+
       setSubmitSuccess(true);
-      
+
       toast({
         title: "Thank you for your inquiry!",
         description: "We'll contact you within 24 hours to discuss your project.",
       });
 
       form.reset();
-      
+
       setTimeout(() => {
         setSubmitSuccess(false);
       }, 5000);
@@ -192,7 +192,7 @@ export default function ContactSection() {
                     <p className="text-sm text-gray-600">All fields marked with * are required</p>
                   </div>
                 </div>
-                
+
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="contact-form">
                     <div className="grid md:grid-cols-2 gap-6">
@@ -203,11 +203,11 @@ export default function ContactSection() {
                           <FormItem>
                             <FormLabel className="text-sm font-semibold text-gray-700">Full Name *</FormLabel>
                             <FormControl>
-                              <Input 
-                                placeholder="John Doe" 
+                              <Input
+                                placeholder="John Doe"
                                 className="h-12 text-base"
-                                data-testid="input-name" 
-                                {...field} 
+                                data-testid="input-name"
+                                {...field}
                               />
                             </FormControl>
                             <FormMessage />
@@ -222,11 +222,11 @@ export default function ContactSection() {
                           <FormItem>
                             <FormLabel className="text-sm font-semibold text-gray-700">Company Name</FormLabel>
                             <FormControl>
-                              <Input 
-                                placeholder="Your Company Ltd." 
+                              <Input
+                                placeholder="Your Company Ltd."
                                 className="h-12 text-base"
-                                data-testid="input-company" 
-                                {...field} 
+                                data-testid="input-company"
+                                {...field}
                               />
                             </FormControl>
                             <FormMessage />
@@ -243,12 +243,12 @@ export default function ContactSection() {
                           <FormItem>
                             <FormLabel className="text-sm font-semibold text-gray-700">Email Address *</FormLabel>
                             <FormControl>
-                              <Input 
-                                type="email" 
-                                placeholder="john@company.com" 
+                              <Input
+                                type="email"
+                                placeholder="john@company.com"
                                 className="h-12 text-base"
-                                data-testid="input-email" 
-                                {...field} 
+                                data-testid="input-email"
+                                {...field}
                               />
                             </FormControl>
                             <FormMessage />
@@ -263,12 +263,12 @@ export default function ContactSection() {
                           <FormItem>
                             <FormLabel className="text-sm font-semibold text-gray-700">Phone Number *</FormLabel>
                             <FormControl>
-                              <Input 
-                                type="tel" 
-                                placeholder="+91 98765 43210" 
+                              <Input
+                                type="tel"
+                                placeholder="+91 98765 43210"
                                 className="h-12 text-base"
-                                data-testid="input-phone" 
-                                {...field} 
+                                data-testid="input-phone"
+                                {...field}
                               />
                             </FormControl>
                             <FormMessage />
@@ -311,11 +311,11 @@ export default function ContactSection() {
                           <FormItem>
                             <FormLabel className="text-sm font-semibold text-gray-700">Project Location *</FormLabel>
                             <FormControl>
-                              <Input 
-                                placeholder="e.g., Chennai, India" 
+                              <Input
+                                placeholder="e.g., Chennai, India"
                                 className="h-12 text-base"
-                                data-testid="input-location" 
-                                {...field} 
+                                data-testid="input-location"
+                                {...field}
                               />
                             </FormControl>
                             <FormMessage />
@@ -362,7 +362,7 @@ export default function ContactSection() {
                         "Submit Project Inquiry"
                       )}
                     </Button>
-                    
+
                     <p className="text-xs text-center text-gray-500 mt-4">
                       By submitting this form, you agree to be contacted about your project inquiry
                     </p>
@@ -379,9 +379,9 @@ export default function ContactSection() {
               </h3>
               <div className="space-y-5">
                 {offices.map((office) => (
-                  <div 
-                    key={office.id} 
-                    className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow" 
+                  <div
+                    key={office.id}
+                    className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"
                     data-testid={`office-${office.id}`}
                   >
                     <div className="mb-4">
@@ -393,17 +393,17 @@ export default function ContactSection() {
                         {office.type}
                       </p>
                     </div>
-                    
+
                     <div className="space-y-3 text-sm">
                       <p className="text-gray-600 leading-relaxed">
                         {office.address}
                       </p>
-                      
+
                       <div className="pt-3 border-t border-gray-200 space-y-2">
                         {office.phones.map((phone, idx) => (
-                          <a 
+                          <a
                             key={idx}
-                            href={`tel:${phone.replace(/\s/g, '')}`} 
+                            href={`tel:${phone.replace(/\s/g, '')}`}
                             className="flex items-center gap-2 text-gray-700 hover:text-imex-red transition-colors group"
                             data-testid={`phone-${office.id}-${idx}`}
                           >
@@ -411,9 +411,9 @@ export default function ContactSection() {
                             <span className="group-hover:underline">{phone}</span>
                           </a>
                         ))}
-                        
-                        <a 
-                          href={`mailto:${office.email}`} 
+
+                        <a
+                          href={`mailto:${office.email}`}
                           className="flex items-center gap-2 text-gray-700 hover:text-imex-red transition-colors group"
                           data-testid={`email-${office.id}`}
                         >
@@ -425,13 +425,13 @@ export default function ContactSection() {
                   </div>
                 ))}
               </div>
-              
+
               <div className="mt-8 bg-gradient-to-br from-imex-red to-red-700 rounded-2xl p-6 text-white">
                 <h4 className="font-bold text-lg mb-3">Need Immediate Assistance?</h4>
                 <p className="text-sm opacity-90 mb-4">
                   Call our headquarters directly for urgent inquiries
                 </p>
-                <a 
+                <a
                   href="tel:+919843110585"
                   className="flex items-center justify-center gap-2 bg-white text-imex-red font-semibold py-3 px-6 rounded-xl hover:bg-gray-100 transition-colors"
                   data-testid="link-call-headquarters"

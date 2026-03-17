@@ -80,7 +80,7 @@ const offices = [
     id: 3,
     city: "Foshan",
     country: "China",
-    type: "Sourcing Hub",
+    type: "Global Hub",
     address:
       "DeYi Commercial Building, 4th Construction Road, 2nd Floor, Lecong Town, Shunde, Foshan, Guangdong - 528 315",
     phones: ["+86 18689244807", "+86 13217573736"],
@@ -180,7 +180,7 @@ export default function Contact() {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <a
                   href="tel:+919842110585"
                   className="group bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-imex-red hover:-translate-y-1"
@@ -237,26 +237,7 @@ export default function Contact() {
                   </p>
                 </div>
 
-                <a
-                  href="https://www.imex.network"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-imex-red hover:-translate-y-1"
-                  data-testid="link-website"
-                >
-                  <div className="w-14 h-14 bg-gradient-to-br from-imex-red to-red-700 rounded-xl mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Globe className="w-7 h-7 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold mb-2 text-center text-gray-900">
-                    Visit Website
-                  </h3>
-                  <p className="text-base font-semibold text-center text-imex-red group-hover:underline">
-                    www.imex.network
-                  </p>
-                  <p className="text-xs text-gray-500 text-center mt-2">
-                    Explore our global network
-                  </p>
-                </a>
+
               </div>
             </div>
           </div>
