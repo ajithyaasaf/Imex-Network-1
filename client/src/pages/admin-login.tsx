@@ -96,7 +96,7 @@ export default function AdminLogin() {
                       <FormControl>
                         <Input
                           type="email"
-                          placeholder="admin@imex.com"
+                          placeholder="Enter your email"
                           data-testid="input-admin-email"
                           {...field}
                         />
@@ -115,7 +115,7 @@ export default function AdminLogin() {
                       <FormControl>
                         <Input
                           type="password"
-                          placeholder="••••••••"
+                          placeholder="Enter your password"
                           data-testid="input-admin-password"
                           {...field}
                         />
