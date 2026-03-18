@@ -66,15 +66,15 @@ export default function AdminDashboard() {
       }
     });
 
-    const q = query(collection(db, "contactInquiries"), orderBy("createdAt", "desc"));
-    
+    const q = query(collection(db, "websites", "imex-network", "contactInquiries"), orderBy("timestamp", "desc"));
+
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const data = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
         createdAt: doc.data().createdAt?.toDate() || new Date(),
       })) as ContactInquiry[];
-      
+
       setInquiries(data);
       setLoading(false);
     });
@@ -88,7 +88,7 @@ export default function AdminDashboard() {
   const handleLogout = async () => {
     try {
       if (!auth) return;
-      
+
       await signOut(auth);
       toast({
         title: "Logged out",
@@ -105,8 +105,8 @@ export default function AdminDashboard() {
       if (!db) {
         throw new Error("Database not initialized");
       }
-      
-      await updateDoc(doc(db, "contactInquiries", id), { status });
+
+      await updateDoc(doc(db, "websites", "imex-network", "contactInquiries", id), { status });
       toast({
         title: "Status updated",
         description: `Inquiry marked as ${status}`,
@@ -123,9 +123,9 @@ export default function AdminDashboard() {
 
   const handleDelete = async () => {
     if (!deleteInquiry || !db) return;
-    
+
     try {
-      await deleteDoc(doc(db, "contactInquiries", deleteInquiry.id));
+      await deleteDoc(doc(db, "websites", "imex-network", "contactInquiries", deleteInquiry.id));
       toast({
         title: "Inquiry deleted",
         description: "The inquiry has been successfully deleted",
@@ -181,7 +181,7 @@ export default function AdminDashboard() {
       inquiry.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       inquiry.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
       inquiry.company?.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     const matchesStatus = statusFilter === "all" || inquiry.status === statusFilter;
 
     return matchesSearch && matchesStatus;

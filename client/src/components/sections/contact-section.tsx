@@ -21,8 +21,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { submitWebsiteForm } from "@/lib/firebase";
 import { useState } from "react";
 
 const contactFormSchema = z.object({
@@ -90,14 +89,9 @@ export default function ContactSection() {
     setSubmitSuccess(false);
 
     try {
-      if (!db) {
-        throw new Error("Database not initialized. Please complete Firebase setup.");
-      }
-
-      await addDoc(collection(db, "contactInquiries"), {
+      await submitWebsiteForm({
         ...data,
         status: "new",
-        createdAt: new Date(),
       });
 
       setSubmitSuccess(true);

@@ -32,8 +32,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
+import { submitWebsiteForm } from "@/lib/firebase";
 import { useState } from "react";
 import bannerImage from "@assets/1_1765189672715.png";
 
@@ -114,17 +113,7 @@ export default function Contact() {
     setSubmitSuccess(false);
 
     try {
-      if (!db) {
-        throw new Error(
-          "Database not initialized. Please complete Firebase setup.",
-        );
-      }
-
-      await addDoc(collection(db, "contactInquiries"), {
-        ...data,
-        status: "new",
-        createdAt: new Date(),
-      });
+      await submitWebsiteForm(data);
 
       setSubmitSuccess(true);
 
