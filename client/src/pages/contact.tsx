@@ -56,8 +56,8 @@ const offices = [
     city: "Chennai",
     country: "India",
     type: "Headquarters",
-    address: "No. 2, Royala Towers - III, 158, Anna Salai, Chennai - 600 002",
-    phones: ["+91 98421 10585", "+91 44 23506452"],
+    address: "18 C, Rayala Towers - III, 158, Anna Salai, Chennai - 600 002",
+    phones: ["+91 98431 10585", "+91 44 23506452"],
     email: "skyimex1@gmail.com",
     hours: "Mon-Sat: 9AM-6PM IST",
     mapUrl:
@@ -68,8 +68,8 @@ const offices = [
     city: "Madurai",
     country: "India",
     type: "Regional Office",
-    address: "No. 82, Melur Main Road Street, Madurai, Tamilnadu - 625 001",
-    phones: ["+91 88233 33807", "+91 0452 4382072"],
+    address: "No. 82, Pandiya Vellalar Street, Madurai, Tamilnadu - 625 001",
+    phones: ["+91 98431 33807", "+91 0452 4382072"],
     email: "skyimex1@gmail.com",
     hours: "Mon-Sat: 9AM-6PM IST",
     mapUrl:
@@ -171,7 +171,7 @@ export default function Contact() {
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <a
-                  href="tel:+919842110585"
+                  href="tel:+919843110585"
                   className="group bg-white rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-imex-red hover:-translate-y-1"
                   data-testid="link-call-us"
                 >
@@ -182,7 +182,7 @@ export default function Contact() {
                     Call Us
                   </h3>
                   <p className="text-base font-semibold text-center text-imex-red group-hover:underline">
-                    +91 98421 10585
+                    +91 98431 10585
                   </p>
                   <p className="text-xs text-gray-500 text-center mt-2">
                     Mon-Sat, 9AM-6PM IST

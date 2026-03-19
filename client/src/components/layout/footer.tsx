@@ -87,15 +87,22 @@ export default function Footer() {
                   skyimex1@gmail.com
                 </a>
               </div>
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 text-imex-red mr-3" />
-                <a
-                  href="tel:+919842110585"
-                  className="hover:text-white transition-colors"
-                  data-testid="footer-phone"
-                >
-                  +91 98421 10585
-                </a>
+              <div className="flex items-start">
+                <Phone className="w-5 h-5 text-imex-red mr-3 mt-1" />
+                <div className="flex flex-col space-y-1">
+                  <a
+                    href="tel:+919843110585"
+                    className="hover:text-white transition-colors"
+                  >
+                    +91 98431 10585
+                  </a>
+                  <a
+                    href="tel:+8618689244807"
+                    className="hover:text-white transition-colors text-sm text-gray-400"
+                  >
+                    +86 18689244807 (China)
+                  </a>
+                </div>
               </div>
               <div className="flex items-start">
                 <Globe className="w-5 h-5 text-imex-red mr-3 mt-1" />
