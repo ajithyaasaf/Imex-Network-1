@@ -111,27 +111,26 @@ const services = [
 
 const projectTypes = [
   {
-    id: "hotel",
-    name: "Hotels & Hospitality",
+    id: "hotels",
+    name: "Hotels",
     icon: Hotel,
     color: "bg-imex-red",
   },
   {
-    id: "hospital",
-    name: "Healthcare Facilities",
-    icon: Building2,
-    color: "bg-imex-red",
+    id: "villas",
+    name: "Villas",
+    icon: Home,
+    color: "bg-orange-500",
   },
   {
-    id: "villa",
-    name: "Villas & Residential",
-    icon: Home,
-    color: "bg-imex-red",
+    id: "institutions",
+    name: "Institutions",
+    icon: Building2,
+    color: "bg-amber-500",
   },
 ];
 
 export default function Services() {
-  const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const [hoveredService, setHoveredService] = useState<number | null>(null);
 
   return (
@@ -297,9 +296,8 @@ export default function Services() {
                 <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                   “Your Goals – Our Mission”
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Select your project type to see how we tailor our services
-                  specifically for you
+                <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                  We source and deliver high-quality materials and equipment for hotels, villas, apartments, and industrial projects worldwide.
                 </p>
               </div>
             </ScrollReveal>
@@ -309,74 +307,26 @@ export default function Services() {
               <div className="grid md:grid-cols-3 gap-6 mb-12">
                 {projectTypes.map((project) => {
                   const ProjectIcon = project.icon;
-                  const isSelected = selectedProject === project.id;
 
                   return (
-                    <button
+                    <div
                       key={project.id}
-                      onClick={() => setSelectedProject(project.id)}
-                      className={`p-8 rounded-3xl border-2 transition-all duration-300 ${
-                        isSelected
-                          ? "border-imex-red bg-imex-red/10 scale-105 shadow-2xl"
-                          : "border-white/10 bg-white/5 hover:border-white/30 hover:bg-white/10"
-                      }`}
+                      className="p-8 rounded-3xl border-2 border-white/10 bg-white/5 transition-all duration-500 text-center group cursor-pointer hover:border-white/30 hover:bg-white/[0.08] hover:-translate-y-2 hover:shadow-2xl hover:shadow-imex-red/10 hover:scale-[1.02]"
                       data-testid={`project-type-${project.id}`}
                     >
                       <div
-                        className={`w-16 h-16 ${project.color} rounded-2xl flex items-center justify-center mb-4 mx-auto`}
+                        className={`w-16 h-16 ${project.color} rounded-2xl flex items-center justify-center mb-4 mx-auto transition-transform duration-500 group-hover:scale-110`}
                       >
                         <ProjectIcon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-white font-bold text-lg">
                         {project.name}
                       </h3>
-                    </button>
+                    </div>
                   );
                 })}
               </div>
 
-              {/* Tailored Service Sequence */}
-              {selectedProject && (
-                <ScrollReveal>
-                  <div className="bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-12">
-                    <h3 className="text-2xl font-bold text-white mb-8 text-center">
-                      Recommended Service Sequence for{" "}
-                      {projectTypes.find((p) => p.id === selectedProject)?.name}
-                    </h3>
-                    <div className="grid md:grid-cols-4 gap-4">
-                      {services.slice(0, 6).map((service, idx) => {
-                        const ServiceIcon = service.icon;
-                        return (
-                          <div
-                            key={service.id}
-                            className="bg-white/10 rounded-2xl p-6 text-center backdrop-blur-sm border border-white/10 hover:border-imex-red/50 transition-all"
-                          >
-                            <div className="w-12 h-12 bg-gradient-to-br from-imex-red to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-3">
-                              <ServiceIcon className="w-6 h-6 text-white" />
-                            </div>
-                            <div className="text-white/60 text-xs mb-1">
-                              Step {idx + 1}
-                            </div>
-                            <div className="text-white font-semibold text-sm">
-                              {service.shortTitle}
-                            </div>
-                            <CheckCircle2 className="w-5 h-5 text-imex-red mx-auto mt-2" />
-                          </div>
-                        );
-                      })}
-                    </div>
-                    <div className="text-center mt-8">
-                      <Button
-                        variant="imex"
-                        size="lg"
-                        data-testid="button-get-custom-quote"
-                      >
-                        Get Custom Quote
-                      </Button>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              )}
             </div>
           </div>
         </section>
