@@ -165,9 +165,7 @@ export default function Clients() {
                               <h3 className="font-bold text-lg text-gray-900 mb-2">{city}</h3>
                               {cityClients.length > 0 ? (
                                 <div>
-                                  <p className="text-sm text-gray-600 mb-2">
-                                    {cityClients.length} {cityClients.length === 1 ? 'client' : 'clients'}
-                                  </p>
+
                                   <div className="space-y-1">
                                     {cityClients.map((client) => (
                                       <div key={client.id} className="text-xs text-gray-700">

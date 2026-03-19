@@ -162,7 +162,7 @@ export default function Header() {
                 size="lg"
                 data-testid="button-start-project"
               >
-                Start Project
+                Contact Us
               </Button>
             </Link>
           </div>

@@ -1,30 +1,46 @@
-import marriottLogo from "@assets/Mariat Madurai_1761895099081.png";
-import amikaLogo from "@assets/Amika madurai_1761895099073.png";
-import royalCourtLogo from "@assets/Royal court madurai_1761895099082.png";
-import heritageLogo from "@assets/Heritage residency madurai_1761895099078.png";
-import bharathiLogo from "@assets/Bharathi Hospital Madurai_1761895099075.png";
-import princeGardenLogo from "@assets/Prince Garden Coimbatore_1761895099082.png";
-import copperLeafLogo from "@assets/Copper Leaf Tirunelveli_1761895099076.png";
-import appletreeLogo from "@assets/Applettree Tirunelveli_1762149184092.png";
-import lanceLogo from "@assets/Hotel Lance Nagerkoil_1762149184094.png";
-import seaviewLogo from "@assets/Hotel sea view kanyakumari_1761895099080.jpg";
-import seashoreLogo from "@assets/Sea Shore kanyakumari_1762149184095.png";
-import hamuseLogo from "@assets/Hotel Hamus Kodaikanal_1761895099079.png";
-import arjunaLogo from "@assets/Hotel Arjuna Rameshwaram_1761895099078.png";
-import abmGrandeLogo from "@assets/ABM_hotel_theni_1765125618362.png";
-import marriottTrichyLogo from "@assets/Hotel_marriot_Trichy_1765125624528.png";
-import saradhaGrandeLogo from "@assets/Hotel_saradha_grand_pudukottai_1765125636658.png";
-import royalGrandKarurLogo from "@assets/Royal_grand_karur_1765125644382.png";
-import krvMeridianLogo from "@assets/KRV_Meridian_karur_1765125652982.png";
-import brindhvanPalaceLogo from "@assets/brindhvan_palace_1765125665541.png";
-import guruHospitalLogo from "@assets/Guru_hospital_madurai_1765125672011.png";
+import marriottLogo from "@/assets/client_logos/marriott-madurai.png";
+import amikaLogo from "@/assets/client_logos/amika-madurai.png";
+import royalCourtLogo from "@/assets/client_logos/royal-court-madurai.png";
+import heritageLogo from "@/assets/client_logos/heritage-residency-madurai.png";
+import bharathiLogo from "@/assets/client_logos/bharathi-hospital-madurai.png";
+import princeGardenLogo from "@/assets/client_logos/prince-garden-coimbatore.png";
+import copperLeafLogo from "@/assets/client_logos/copper-leaf-tirunelveli.png";
+import appletreeLogo from "@/assets/client_logos/appletree-tirunelveli.png";
+import lanceLogo from "@/assets/client_logos/hotel-lance-nagerkoil.png";
+import seaviewLogo from "@/assets/client_logos/hotel-seaview-kanyakumari.jpg";
+import seashoreLogo from "@/assets/client_logos/seashore-kanyakumari.png";
+import hamuseLogo from "@/assets/client_logos/hotel-hamus-kodaikanal.png";
+import arjunaLogo from "@/assets/client_logos/hotel-arjuna-rameshwaram.png";
+import abmGrandeLogo from "@/assets/client_logos/abm-grande-theni.png";
+import marriottTrichyLogo from "@/assets/client_logos/marriott-tiruchirappalli.png";
+import saradhaGrandeLogo from "@/assets/client_logos/saradha-grande-pudukkotai.png";
+import royalGrandKarurLogo from "@/assets/client_logos/royal-grand-karur.png";
+import krvMeridianLogo from "@/assets/client_logos/krv-meridian-karur.png";
+import brindhvanPalaceLogo from "@/assets/client_logos/brindhvan-palace-ottanchathiram.png";
+import guruHospitalLogo from "@/assets/client_logos/guru-hospital-madurai.png";
+import amaariLogo from "@/assets/client_logos/amaari-kanyakumari.png";
+import ananyasLogo from "@/assets/client_logos/ananyas-coimbatore.png";
+import crGrandeLogo from "@/assets/client_logos/cr-grande-madurai.png";
+import orbisLogo from "@/assets/client_logos/orbis-coimbatore.png";
+import bhbLogo from "@/assets/client_logos/BHB mahal, Theni.png";
+import kodaiIntlLogo from "@/assets/client_logos/Hotel Kodai international, Kodaikanal.png";
+import sahanaLogo from "@/assets/client_logos/Hotel sahana castle, nagercoil.png";
+import muruganLogo from "@/assets/client_logos/sri murugan residency, karur.jpg";
+import starPalaceLogo from "@/assets/client_logos/star palace, rameshwaram.png";
+import afnaParkLogo from "@/assets/client_logos/Afna park, tirunelveli.jpg";
+import chettinadSchoolLogo from "@/assets/client_logos/Chettinad Public school, karaikudi.png";
+import hotelAmilLogo from "@/assets/client_logos/Hotel amil, Rajapalayam.png";
+import palmyraLogo from "@/assets/client_logos/Hotel palmyra grand suite, tirunelveli.png";
+import scadLogo from "@/assets/client_logos/SCAD group of instituition, tirunelveli.png";
+import hamshaveniLogo from "@/assets/client_logos/hamshaveni heritage, sankarankovil.png";
+import svsGrandeLogo from "@/assets/client_logos/svs grande, pudukottai.png";
 
 export interface Client {
   id: string;
   name: string;
   logo: string;
   city: string;
-  type: 'Hotel' | 'Hospital' | 'Resort';
+  type: 'Hotel' | 'Hospital' | 'Resort' | 'Education';
   testimonial?: {
     quote: string;
     author: string;
@@ -53,13 +69,29 @@ export const clientLogos: Record<string, string> = {
   'krv-meridian-karur': krvMeridianLogo,
   'brindhvan-palace-ottanchathiram': brindhvanPalaceLogo,
   'guru-hospital-madurai': guruHospitalLogo,
+  'amaari-kanyakumari': amaariLogo,
+  'ananyas-coimbatore': ananyasLogo,
+  'cr-grande-madurai': crGrandeLogo,
+  'orbis-coimbatore': orbisLogo,
+  'bhb-mahal-theni': bhbLogo,
+  'hotel-kodai-intl': kodaiIntlLogo,
+  'hotel-sahana-castle': sahanaLogo,
+  'sri-murugan-residency': muruganLogo,
+  'star-palace-rameshwaram': starPalaceLogo,
+  'afna-park-tirunelveli': afnaParkLogo,
+  'chettinad-school-karaikudi': chettinadSchoolLogo,
+  'hotel-amil-rajapalayam': hotelAmilLogo,
+  'hotel-palmyra-tirunelveli': palmyraLogo,
+  'scad-institution-tirunelveli': scadLogo,
+  'hamshaveni-heritage-sankarankovil': hamshaveniLogo,
+  'svs-grande-pudukkottai': svsGrandeLogo,
 };
 
 export const clients: Client[] = [
   {
     id: 'marriott-madurai',
     name: 'Courtyard by Marriott',
-    logo: '@assets/Mariat Madurai_1761895099081.png',
+    logo: '@/assets/client_logos/marriott-madurai.png',
     city: 'Madurai',
     type: 'Hotel',
     testimonial: {
@@ -71,7 +103,7 @@ export const clients: Client[] = [
   {
     id: 'amika-madurai',
     name: 'Amika Hotel',
-    logo: '@assets/Amika madurai_1761895099073.png',
+    logo: '@/assets/client_logos/amika-madurai.png',
     city: 'Madurai',
     type: 'Hotel',
     testimonial: {
@@ -83,7 +115,7 @@ export const clients: Client[] = [
   {
     id: 'royal-court-madurai',
     name: 'Royal Court',
-    logo: '@assets/Royal court madurai_1761895099082.png',
+    logo: '@/assets/client_logos/royal-court-madurai.png',
     city: 'Madurai',
     type: 'Hotel',
     testimonial: {
@@ -95,7 +127,7 @@ export const clients: Client[] = [
   {
     id: 'heritage-residency-madurai',
     name: 'Heritage Residency',
-    logo: '@assets/Heritage residency madurai_1761895099078.png',
+    logo: '@/assets/client_logos/heritage-residency-madurai.png',
     city: 'Madurai',
     type: 'Hotel',
     testimonial: {
@@ -107,7 +139,7 @@ export const clients: Client[] = [
   {
     id: 'bharathi-hospital-madurai',
     name: 'Bharathi Infinity Hospital',
-    logo: '@assets/Bharathi Hospital Madurai_1761895099075.png',
+    logo: '@/assets/client_logos/bharathi-hospital-madurai.png',
     city: 'Madurai',
     type: 'Hospital',
     testimonial: {
@@ -119,7 +151,7 @@ export const clients: Client[] = [
   {
     id: 'prince-garden-coimbatore',
     name: 'Prince Gardens Hotel',
-    logo: '@assets/Prince Garden Coimbatore_1761895099082.png',
+    logo: '@/assets/client_logos/prince-garden-coimbatore.png',
     city: 'Coimbatore',
     type: 'Hotel',
     testimonial: {
@@ -131,7 +163,7 @@ export const clients: Client[] = [
   {
     id: 'copper-leaf-tirunelveli',
     name: 'Copper Leaf Hotel',
-    logo: '@assets/Copper Leaf Tirunelveli_1761895099076.png',
+    logo: '@/assets/client_logos/copper-leaf-tirunelveli.png',
     city: 'Tirunelveli',
     type: 'Hotel',
     testimonial: {
@@ -143,7 +175,7 @@ export const clients: Client[] = [
   {
     id: 'appletree-tirunelveli',
     name: 'Hotel Appletree',
-    logo: '@assets/Applettree Tirunelveli_1762149184092.png',
+    logo: '@/assets/client_logos/appletree-tirunelveli.png',
     city: 'Tirunelveli',
     type: 'Hotel',
     testimonial: {
@@ -155,7 +187,7 @@ export const clients: Client[] = [
   {
     id: 'hotel-lance-nagerkoil',
     name: 'Hotel Lance',
-    logo: '@assets/Hotel Lance Nagerkoil_1762149184094.png',
+    logo: '@/assets/client_logos/hotel-lance-nagerkoil.png',
     city: 'Nagerkoil',
     type: 'Hotel',
     testimonial: {
@@ -167,7 +199,7 @@ export const clients: Client[] = [
   {
     id: 'hotel-seaview-kanyakumari',
     name: 'Hotel Sea View',
-    logo: '@assets/Hotel sea view kanyakumari_1761895099080.jpg',
+    logo: '@/assets/client_logos/hotel-seaview-kanyakumari.jpg',
     city: 'Kanyakumari',
     type: 'Hotel',
     testimonial: {
@@ -179,7 +211,7 @@ export const clients: Client[] = [
   {
     id: 'seashore-kanyakumari',
     name: 'The Seashore Hotel',
-    logo: '@assets/Sea Shore kanyakumari_1762149184095.png',
+    logo: '@/assets/client_logos/seashore-kanyakumari.png',
     city: 'Kanyakumari',
     type: 'Hotel',
     testimonial: {
@@ -191,7 +223,7 @@ export const clients: Client[] = [
   {
     id: 'hotel-hamus-kodaikanal',
     name: 'The Hamuse',
-    logo: '@assets/Hotel Hamus Kodaikanal_1761895099079.png',
+    logo: '@/assets/client_logos/hotel-hamus-kodaikanal.png',
     city: 'Kodaikanal',
     type: 'Hotel',
     testimonial: {
@@ -203,7 +235,7 @@ export const clients: Client[] = [
   {
     id: 'hotel-arjuna-rameshwaram',
     name: 'Hotel Arjunaa',
-    logo: '@assets/Hotel Arjuna Rameshwaram_1761895099078.png',
+    logo: '@/assets/client_logos/hotel-arjuna-rameshwaram.png',
     city: 'Rameshwaram',
     type: 'Hotel',
     testimonial: {
@@ -215,7 +247,7 @@ export const clients: Client[] = [
   {
     id: 'abm-grande-theni',
     name: 'ABM Grande',
-    logo: '@assets/ABM_hotel_theni_1765125618362.png',
+    logo: '@/assets/client_logos/abm-grande-theni.png',
     city: 'Theni',
     type: 'Hotel',
     testimonial: {
@@ -227,7 +259,7 @@ export const clients: Client[] = [
   {
     id: 'marriott-tiruchirappalli',
     name: 'Courtyard by Marriott',
-    logo: '@assets/Hotel_marriot_Trichy_1765125624528.png',
+    logo: '@/assets/client_logos/marriott-tiruchirappalli.png',
     city: 'Tiruchirappalli',
     type: 'Hotel',
     testimonial: {
@@ -239,7 +271,7 @@ export const clients: Client[] = [
   {
     id: 'saradha-grande-pudukkotai',
     name: 'Saradha Grande',
-    logo: '@assets/Hotel_saradha_grand_pudukottai_1765125636658.png',
+    logo: '@/assets/client_logos/saradha-grande-pudukkotai.png',
     city: 'Pudukkotai',
     type: 'Hotel',
     testimonial: {
@@ -251,7 +283,7 @@ export const clients: Client[] = [
   {
     id: 'royal-grand-karur',
     name: 'The Royal Grand',
-    logo: '@assets/Royal_grand_karur_1765125644382.png',
+    logo: '@/assets/client_logos/royal-grand-karur.png',
     city: 'Karur',
     type: 'Hotel',
     testimonial: {
@@ -263,7 +295,7 @@ export const clients: Client[] = [
   {
     id: 'krv-meridian-karur',
     name: 'KRV Meridian Hotel',
-    logo: '@assets/KRV_Meridian_karur_1765125652982.png',
+    logo: '@/assets/client_logos/krv-meridian-karur.png',
     city: 'Karur',
     type: 'Hotel',
     testimonial: {
@@ -275,7 +307,7 @@ export const clients: Client[] = [
   {
     id: 'brindhvan-palace-ottanchathiram',
     name: 'Brindhavan Palace',
-    logo: '@assets/brindhvan_palace_1765125665541.png',
+    logo: '@/assets/client_logos/brindhvan-palace-ottanchathiram.png',
     city: 'Ottanchathiram',
     type: 'Hotel',
     testimonial: {
@@ -287,7 +319,7 @@ export const clients: Client[] = [
   {
     id: 'guru-hospital-madurai',
     name: 'Guru Multispeciality Hospital',
-    logo: '@assets/Guru_hospital_madurai_1765125672011.png',
+    logo: '@/assets/client_logos/guru-hospital-madurai.png',
     city: 'Madurai',
     type: 'Hospital',
     testimonial: {
@@ -295,7 +327,199 @@ export const clients: Client[] = [
       author: 'Hospital Administration',
       position: 'Guru Multispeciality Hospital, Madurai'
     }
-  }
+  },
+  {
+    id: 'amaari-kanyakumari',
+    name: 'Amaari Beach Resort',
+    logo: '@/assets/client_logos/amaari-kanyakumari.png',
+    city: 'Kanyakumari',
+    type: 'Resort',
+    testimonial: {
+      quote: 'IMEX provided us with premium quality furnishings that perfectly matched our luxury coastal resort standards. Their service and sourcing capabilities are truly exceptional.',
+      author: 'Management Team',
+      position: 'Amaari Beach Resort, Kanyakumari'
+    }
+  },
+  {
+    id: 'ananyas-coimbatore',
+    name: "Ananya's Nana Nani",
+    logo: "@/assets/client_logos/ananyas-coimbatore.png",
+    city: 'Coimbatore',
+    type: 'Resort',
+    testimonial: {
+      quote: 'The craftsmanship and quality of items sourced by IMEX perfectly matched our luxury lifestyle community standards. Highly professional and reliable.',
+      author: 'Management',
+      position: "Ananya's Nana Nani Homes"
+    }
+  },
+  {
+    id: 'cr-grande-madurai',
+    name: 'CR Grande',
+    logo: '@/assets/client_logos/cr-grande-madurai.png',
+    city: 'Madurai',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'IMEX delivered exceptional value without compromising on quality for our hotel interiors. Their understanding of the hospitality sector is outstanding.',
+      author: 'Management Team',
+      position: 'CR Grande, Madurai'
+    }
+  },
+  {
+    id: 'orbis-coimbatore',
+    name: 'The Orbis Hotel',
+    logo: '@/assets/client_logos/orbis-coimbatore.png',
+    city: 'Coimbatore',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'IMEX offered competitive pricing with superior quality for our business hotel. Their project management from sourcing to delivery was flawless.',
+      author: 'Management',
+      position: 'The Orbis Hotel, Coimbatore'
+    }
+  },
+  {
+    id: 'bhb-mahal-theni',
+    name: 'BHB Mahal',
+    logo: '@/assets/client_logos/BHB mahal, Theni.png',
+    city: 'Theni',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'IMEX provided high-quality furnishing and decor for our event space. Their attention to detail helped us create a grand experience for our guests.',
+      author: 'Management Team',
+      position: 'BHB Mahal, Theni'
+    }
+  },
+  {
+    id: 'hotel-kodai-intl',
+    name: 'Hotel Kodai International',
+    logo: '@/assets/client_logos/Hotel Kodai international, Kodaikanal.png',
+    city: 'Kodaikanal',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'The premium furniture and amenities sourced by IMEX perfectly complement our hill station luxury. Their logistical support was impressive.',
+      author: 'General Manager',
+      position: 'Hotel Kodai International'
+    }
+  },
+  {
+    id: 'hotel-sahana-castle',
+    name: 'Hotel Sahana Castle',
+    logo: '@/assets/client_logos/Hotel sahana castle, nagercoil.png',
+    city: 'Nagerkoil',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'IMEX delivered exceptionally elegant interiors that our guests admire. Their ability to source unique products is a huge plus.',
+      author: 'Owner',
+      position: 'Hotel Sahana Castle'
+    }
+  },
+  {
+    id: 'sri-murugan-residency',
+    name: 'Sri Murugan Residency',
+    logo: '@/assets/client_logos/sri murugan residency, karur.jpg',
+    city: 'Karur',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'Durable and stylish furnishings at a competitive price. IMEX is our trusted partner for all sourcing needs.',
+      author: 'Management',
+      position: 'Sri Murugan Residency, Karur'
+    }
+  },
+  {
+    id: 'star-palace-rameshwaram',
+    name: 'Star Palace',
+    logo: '@/assets/client_logos/star palace, rameshwaram.png',
+    city: 'Rameshwaram',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'The quality of materials and the service from IMEX exceeded our expectations. They made our outfitting project very successful.',
+      author: 'Director',
+      position: 'Star Palace, Rameshwaram'
+    }
+  },
+  {
+    id: 'afna-park-tirunelveli',
+    name: 'Afna Park',
+    logo: '@/assets/client_logos/Afna park, tirunelveli.jpg',
+    city: 'Tirunelveli',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'IMEX delivered exceptional quality for our hotel project in Tirunelveli. Their professional approach made the entire process seamless.',
+      author: 'Management',
+      position: 'Afna Park, Tirunelveli'
+    }
+  },
+  {
+    id: 'chettinad-school-karaikudi',
+    name: 'Chettinad Public School',
+    logo: '@/assets/client_logos/Chettinad Public school, karaikudi.png',
+    city: 'Karaikudi',
+    type: 'Education',
+    testimonial: {
+      quote: 'The furniture and outfitting provided by IMEX created a vibrant and conducive learning environment for our students.',
+      author: 'Director',
+      position: 'Chettinad Public School'
+    }
+  },
+  {
+    id: 'hotel-amil-rajapalayam',
+    name: 'Hotel Amil',
+    logo: '@/assets/client_logos/Hotel amil, Rajapalayam.png',
+    city: 'Rajapalayam',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'IMEX is our go-to partner for premium furnishings. Their expertise in sourcing from global markets is unmatched.',
+      author: 'Owner',
+      position: 'Hotel Amil, Rajapalayam'
+    }
+  },
+  {
+    id: 'hotel-palmyra-tirunelveli',
+    name: 'Hotel Palmyra Grand Suite',
+    logo: '@/assets/client_logos/Hotel palmyra grand suite, tirunelveli.png',
+    city: 'Tirunelveli',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'Highly satisfied with the quality and aesthetics of the items delivered by IMEX. They truly understand hospitality standards.',
+      author: 'General Manager',
+      position: 'Hotel Palmyra Grand Suite'
+    }
+  },
+  {
+    id: 'scad-institution-tirunelveli',
+    name: 'SCAD Group of Institutions',
+    logo: '@/assets/client_logos/SCAD group of instituition, tirunelveli.png',
+    city: 'Tirunelveli',
+    type: 'Education',
+    testimonial: {
+      quote: 'IMEX provided robust and ergonomic solutions for our educational complex. Their service is reliable and efficient.',
+      author: 'Administrative Head',
+      position: 'SCAD Group of Institutions'
+    }
+  },
+  {
+    id: 'hamshaveni-heritage-sankarankovil',
+    name: 'Hamshaveni Heritage',
+    logo: '@/assets/client_logos/hamshaveni heritage, sankarankovil.png',
+    city: 'Sankarankovil',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'The traditional yet elegant furnishings from IMEX perfectly complement our heritage theme. Their sourcing is top-notch.',
+      author: 'Management',
+      position: 'Hamshaveni Heritage'
+    }
+  },
+  {
+    id: 'svs-grande-pudukkottai',
+    name: 'SVS Grande',
+    logo: '@/assets/client_logos/svs grande, pudukottai.png',
+    city: 'Pudukkotai',
+    type: 'Hotel',
+    testimonial: {
+      quote: 'Durable products and great service. IMEX helped us achieve a premium look for our guest rooms within budget.',
+      author: 'Director',
+      position: 'SVS Grande, Pudukkotai'
+    }
+  },
 ];
 
 export const cities = [
@@ -311,7 +535,12 @@ export const cities = [
   'Tiruchirappalli',
   'Pudukkotai',
   'Karur',
-  'Ottanchathiram'
+  'Ottanchathiram',
+  'Karaikudi',
+  'Rajapalayam',
+  'Sankarankovil'
 ] as const;
 
-export const clientTypes = ['All', 'Hotel', 'Hospital', 'Resort'] as const;
+export const clientTypes = ['All', 'Hotel', 'Hospital', 'Resort', 'Education'] as const;
+
+
