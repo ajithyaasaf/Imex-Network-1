@@ -2,7 +2,7 @@ import { MapPin, Star } from "lucide-react";
 import { motion } from "framer-motion";
 
 import louvreImage from "@assets/image_1758018958649.png";
-import redStarImage from "@assets/image_1758019124319.png";
+import sunlinkImage from "@assets/sunlink_foshan.jpg";
 import lightingMallImage from "@assets/image_1758019255009.png";
 import ceramicMarketImage from "@assets/image_1758019628663.png";
 import householdMallImage from "@assets/image_1758020801859.png";
@@ -23,13 +23,13 @@ const chinaMarkets = [
   },
   {
     id: 2,
-    name: "Red Star Macalline Mall",
-    location: "Multiple Locations",
+    name: "Sunlink Furniture Market",
+    location: "Lecong Foshan",
     description:
-      "One of China's largest retail chains, providing a comprehensive range of styles and price points.",
-    specialty: "Complete sourcing solutions from budget to high-end",
-    advantage: "Unmatched variety with guaranteed quality across all price ranges",
-    image: redStarImage,
+      "A major furniture sourcing hub in Foshan, known for its extensive range of mid-to-high-end furniture and sofa bases.",
+    specialty: "Mid-to-high-end residential and office furniture sourcing",
+    advantage: "Foshan's largest sofa procurement base and reasonable pricing for premium designs",
+    image: sunlinkImage,
   },
   {
     id: 3,
@@ -122,7 +122,7 @@ export default function MarketsSection() {
               data-testid={`market-${market.id}`}
             >
               {/* Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-[450px] overflow-hidden">
                 <img
                   src={market.image}
                   alt={market.name}
@@ -139,24 +139,13 @@ export default function MarketsSection() {
               </div>
 
               {/* Content */}
+              {/* Content */}
               <div className="p-6">
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {market.description}
-                </p>
-
-                <div className="mb-4">
-                  <div className="flex items-start gap-2 mb-2">
-                    <Star className="w-5 h-5 text-imex-red flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Specialty:</h4>
-                      <p className="text-sm text-gray-600">{market.specialty}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-imex-red/5 border-l-4 border-imex-red rounded-lg p-4">
-                  <h4 className="font-semibold text-imex-red mb-2">Strategic Advantage:</h4>
-                  <p className="text-sm text-gray-700">{market.advantage}</p>
+                <div className="flex items-start gap-3">
+                  <Star className="w-5 h-5 text-imex-red flex-shrink-0 mt-0.5" />
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {market.specialty}
+                  </p>
                 </div>
               </div>
             </motion.div>
