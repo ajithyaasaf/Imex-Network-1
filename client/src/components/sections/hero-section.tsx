@@ -4,7 +4,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 
 import heroImage1 from "@assets/1_1765189672715.png";
-import heroImage2 from "@assets/hero 2_1757675986777.png";
+import heroImage2 from "@assets/hero_3.png";
 import heroImage3 from "@assets/generated_images/luxury_hotel_lobby_interior.png";
 
 const slides = [
