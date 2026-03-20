@@ -63,7 +63,7 @@ const processSteps = [
           </h4>
         </div>
         <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-          We plan your trip to China & provide you total assistance including factory tours, translation, and logistics.
+          We plan your trip to China & provide you total assistance including visa process, factory tours, translation, and logistics.
         </p>
         <div className="bg-imex-red/5 dark:bg-imex-red/10 border-l-4 border-imex-red rounded-lg p-4">
           <h5 className="font-semibold text-imex-red mb-2">✨ Your Advantage:</h5>
