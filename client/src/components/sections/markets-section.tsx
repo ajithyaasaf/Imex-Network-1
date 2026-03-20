@@ -100,12 +100,12 @@ export default function MarketsSection() {
         {/* Section 1: Gateway to Premier Markets */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Your Unmatched On-the-Ground Expertise in China
+            Our Expert Team on the Ground in China
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Our success is rooted in deep relationships and extensive knowledge within China's key wholesale markets.
-            With our physical presence and local expertise, we provide you access to premium products at unbeatable prices—
-            an advantage remote competitors simply cannot match.
+            We have a local team in China that knows the best markets and has strong relationships with top manufacturers.
+            Because we are physically there, we can find you the best products at the lowest prices something other companies
+            can't do from far away.
           </p>
         </div>
 
@@ -160,12 +160,11 @@ export default function MarketsSection() {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Our On-the-Ground Team Makes the Difference
+            Why Our Local Team Matters
           </h3>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            With our permanent presence in Foshan and established relationships across all major markets,
-            we provide you with insider access, real-time quality control, and negotiating power that
-            remote sourcing companies simply cannot offer.
+            Having our team living and working in China means we can check the quality of your products in person
+            and get you the best deals. We work directly at the source to make sure everything is perfect for you.
           </p>
         </motion.div>
       </div>
