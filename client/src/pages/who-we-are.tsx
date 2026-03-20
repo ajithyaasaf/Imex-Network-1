@@ -4,6 +4,15 @@ import ProcessSection from "@/components/sections/process-section";
 import CulturalBridgeSection from "@/components/sections/cultural-bridge-section";
 import AchievementsSection from "@/components/sections/achievements-section";
 import bannerImage from "@assets/1_1765189672715.png";
+import { 
+  Search, 
+  Handshake, 
+  CircleDollarSign, 
+  FileText, 
+  Landmark, 
+  ShieldCheck, 
+  Truck 
+} from "lucide-react";
 
 // Import Framer Motion for modern animations
 import { motion } from "framer-motion";
@@ -107,13 +116,13 @@ export default function WhoWeAre() {
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto"
               >
                 {[
-                  { title: "Sourcing", desc: "Finding the right suppliers and products", icon: "🔍" },
-                  { title: "Trade Leads", desc: "Connecting you with quality markets", icon: "🤝" },
-                  { title: "Pricing", desc: "Competitive wholesale rates", icon: "💰" },
-                  { title: "Legal Formalities", desc: "Complete documentation support", icon: "📄" },
-                  { title: "Taxes & Customs", desc: "Hassle-free clearance duties", icon: "🏛️" },
-                  { title: "Quality Assurance", desc: "Rigorous product inspection", icon: "✅" },
-                  { title: "Logistics & Delivery", desc: "Reliable door-to-door solutions", icon: "🚢" },
+                  { title: "Sourcing", desc: "Finding the right suppliers and products", icon: Search },
+                  { title: "Trade Leads", desc: "Connecting you with quality markets", icon: Handshake },
+                  { title: "Pricing", desc: "Competitive wholesale rates", icon: CircleDollarSign },
+                  { title: "Legal Formalities", desc: "Complete documentation support", icon: FileText },
+                  { title: "Taxes & Customs", desc: "Hassle-free clearance duties", icon: Landmark },
+                  { title: "Quality Assurance", desc: "Rigorous product inspection", icon: ShieldCheck },
+                  { title: "Logistics & Delivery", desc: "Reliable door-to-door solutions", icon: Truck },
                 ].map((service, index) => (
                   <motion.div
                     key={index}
@@ -121,8 +130,8 @@ export default function WhoWeAre() {
                     whileHover={{ y: -8, transition: { duration: 0.2 } }}
                     className="group bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(220,38,38,0.1)] border border-gray-100 transition-all duration-300"
                   >
-                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {service.icon}
+                    <div className="text-red-600 mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <service.icon size={44} strokeWidth={1.5} />
                     </div>
                     <h4 className="text-2xl font-bold text-gray-900 mb-2">{service.title}</h4>
                     <p className="text-gray-500 text-base leading-relaxed">{service.desc}</p>
