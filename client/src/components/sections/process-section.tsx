@@ -205,7 +205,7 @@ export default function ProcessSection() {
             The IMEX Blueprint: Your 8-Step Journey from Vision to Reality
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed" data-testid="text-process-description">
-            Our proven process is designed to ensure quality, transparency, and on-time delivery for every client. 
+            Our proven process is designed to ensure quality, transparency, and on-time delivery for every client.
             Experience seamless execution from concept to completion.
           </p>
         </div>

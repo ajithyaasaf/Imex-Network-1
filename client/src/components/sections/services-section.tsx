@@ -124,7 +124,7 @@ export default function ServicesSection() {
                 return (
                   <ScrollReveal key={service.id} delay={index * 100}>
                     <div
-                      className="bg-white text-gray-800 rounded-2xl overflow-hidden hover-lift transition-all duration-300 w-full max-w-sm mx-auto relative border border-gray-100 shadow-lg hover:shadow-xl h-[260px] flex flex-col transform hover:scale-[1.02]"
+                      className="bg-white text-gray-800 rounded-2xl overflow-hidden hover-lift transition-all duration-300 w-full max-w-sm mx-auto relative border border-gray-100 shadow-lg hover:shadow-xl h-[280px] flex flex-col transform hover:scale-[1.02]"
                       data-testid={`service-card-${service.id}`}
                     >
                       {/* White Circle with Icon */}
@@ -140,10 +140,10 @@ export default function ServicesSection() {
                       {/* Content Area */}
                       <div className="px-4 pb-6 flex-1 flex flex-col justify-center">
                         <div className="text-center">
-                          <h3 className="text-xs md:text-sm font-bold mb-3 tracking-wide uppercase leading-tight break-words">
+                          <h3 className="text-xs md:text-base font-bold mb-3 tracking-wide uppercase leading-tight break-words">
                             {service.title}
                           </h3>
-                          <p className="text-gray-600 text-xs leading-relaxed">
+                          <p className="text-gray-600 text-sm leading-relaxed">
                             {service.description}
                           </p>
                         </div>

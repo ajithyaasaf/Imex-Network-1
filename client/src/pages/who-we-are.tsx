@@ -32,7 +32,7 @@ export default function WhoWeAre() {
     <div className="min-h-screen bg-gray-50 overflow-hidden">
       <Header />
       <main>
-        
+
         {/* Parallax-style Banner */}
         <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
           <motion.div
@@ -43,9 +43,9 @@ export default function WhoWeAre() {
             style={{ backgroundImage: `url(${bannerImage})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-transparent" />
-          
+
           <div className="relative z-10 container mx-auto px-6 py-24">
-            <motion.div 
+            <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
@@ -65,11 +65,11 @@ export default function WhoWeAre() {
         <section className="py-24 bg-white relative">
           {/* Decorative Background Blob */}
           <div className="absolute top-0 left-0 w-96 h-96 bg-red-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob" />
-          
+
           <div className="container mx-auto px-6 relative z-10">
-            
+
             {/* Intro Text */}
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -86,20 +86,20 @@ export default function WhoWeAre() {
 
             {/* Staggered Grid for Services */}
             <div className="mb-32">
-              <motion.div 
+              <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeInUp}
                 className="text-center mb-16"
               >
-                <h3 className="text-3xl font-bold text-gray-900 inline-block relative">
+                <h3 className="text-4xl font-bold text-gray-900 inline-block relative">
                   A True One-Stop Solution
                   <span className="absolute -bottom-4 left-1/2 w-12 h-1 bg-red-600 rounded-full -translate-x-1/2"></span>
                 </h3>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
@@ -115,24 +115,24 @@ export default function WhoWeAre() {
                   { title: "Quality Assurance", desc: "Rigorous product inspection", icon: "✅" },
                   { title: "Logistics & Delivery", desc: "Reliable door-to-door solutions", icon: "🚢" },
                 ].map((service, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     variants={popIn}
                     whileHover={{ y: -8, transition: { duration: 0.2 } }}
                     className="group bg-white p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(220,38,38,0.1)] border border-gray-100 transition-all duration-300"
                   >
-                    <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h4>
-                    <p className="text-gray-500 text-sm leading-relaxed">{service.desc}</p>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-2">{service.title}</h4>
+                    <p className="text-gray-500 text-base leading-relaxed">{service.desc}</p>
                   </motion.div>
                 ))}
               </motion.div>
             </div>
 
             {/* Global Reach Animated Card */}
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
@@ -148,13 +148,13 @@ export default function WhoWeAre() {
                     With a strong global presence, we ensure personalized service, uncompromised quality, and efficient execution no matter where you are.
                   </p>
                 </div>
-                
+
                 {/* Right Side (Light) */}
                 <div className="md:w-7/12 p-12 md:p-16 flex flex-col justify-center bg-white">
                   <p className="text-gray-400 font-bold mb-8 uppercase tracking-widest text-sm">
                     Proudly Serving Clients Across
                   </p>
-                  <motion.div 
+                  <motion.div
                     variants={staggerContainer}
                     initial="hidden"
                     whileInView="visible"
@@ -162,11 +162,11 @@ export default function WhoWeAre() {
                     className="flex flex-wrap gap-4"
                   >
                     {[
-                      "India", "USA", "Canada", "Middle East", 
+                      "India", "USA", "Canada", "Middle East",
                       "Maldives", "South Pacific Islands", "Europe"
                     ].map((region, index) => (
-                      <motion.span 
-                        key={index} 
+                      <motion.span
+                        key={index}
                         variants={popIn}
                         whileHover={{ scale: 1.05, backgroundColor: "#fee2e2", color: "#dc2626" }}
                         className="px-6 py-3 bg-gray-50 border border-gray-100 text-gray-700 rounded-2xl text-sm font-bold transition-colors cursor-default shadow-sm"

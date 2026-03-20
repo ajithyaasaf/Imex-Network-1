@@ -47,7 +47,7 @@ export default function Home() {
                     </div>
 
                     <div className="flex-1 text-center">
-                      <p className="text-gray-700 text-sm mb-6">
+                      <p className="text-gray-700 text-lg mb-6">
                         Discover our story, values, and the passion that drives
                         us forward
                       </p>
@@ -71,7 +71,7 @@ export default function Home() {
                     </div>
 
                     <div className="flex-1 text-center">
-                      <p className="text-gray-700 text-sm mb-6">
+                      <p className="text-gray-700 text-lg mb-6">
                         Comprehensive solutions that transform businesses
                         globally
                       </p>
@@ -95,7 +95,7 @@ export default function Home() {
                     </div>
 
                     <div className="flex-1 text-center">
-                      <p className="text-gray-700 text-sm mb-6">
+                      <p className="text-gray-700 text-lg mb-6">
                         Success stories and case studies from around the world
                       </p>
                     </div>
@@ -118,7 +118,7 @@ export default function Home() {
                     </div>
 
                     <div className="flex-1 text-center">
-                      <p className="text-gray-700 text-sm mb-6">
+                      <p className="text-gray-700 text-lg mb-6">
                         Ready to start your project? Let's connect and make it
                         happen
                       </p>
