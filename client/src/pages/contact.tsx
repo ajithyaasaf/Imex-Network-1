@@ -59,7 +59,7 @@ const offices = [
     address: "18 C, Rayala Towers - III, 158, Anna Salai, Chennai - 600 002",
     phones: ["+91 98431 10585", "+91 44 23506452"],
     email: "skyimex1@gmail.com",
-    hours: "Mon-Sat: 9AM-6PM IST",
+    hours: "Mon-Sat: 10AM-7PM IST",
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8411523694734!2d80.25423831482189!3d13.047985290802974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267a68e3f8b0f%3A0x3e1c8df1b78e8f8e!2sAnna%20Salai%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin",
   },
@@ -71,7 +71,7 @@ const offices = [
     address: "No. 82, Pandiya Vellalar Street, Madurai, Tamilnadu - 625 001",
     phones: ["+91 98431 33807", "+91 0452 4382072"],
     email: "skyimex1@gmail.com",
-    hours: "Mon-Sat: 9AM-6PM IST",
+    hours: "Mon-Sat: 10AM-7PM IST",
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.7665894717595!2d78.11947631482006!3d9.925201292851234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b1189633%3A0xdc955b7264f63933!2sMadurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin",
   },
@@ -84,7 +84,7 @@ const offices = [
       "DeYi Commercial Building, 4th Construction Road, 2nd Floor, Lecong Town, Shunde, Foshan, Guangdong - 528 315",
     phones: ["+86 18689244807", "+86 13217573736"],
     email: "skyimex1@gmail.com",
-    hours: "Mon-Sat: 9AM-6PM CST",
+    hours: "Mon-Sat: 10AM-7PM CST",
     mapUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59540.89537726633!2d113.09399672167967!3d22.895828700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403fefbf5b0d6f7%3A0x1e1c8df1b78e8f8e!2sFoshan%2C%20Guangdong%20Province%2C%20China!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin",
   },
@@ -120,7 +120,7 @@ export default function Contact() {
       toast({
         title: "Thank you for your inquiry!",
         description:
-          "We'll contact you within 24 hours to discuss your project.",
+          "We'll contact you as soon as possible to discuss your project.",
       });
 
       form.reset();
@@ -185,7 +185,7 @@ export default function Contact() {
                     +91 98431 10585
                   </p>
                   <p className="text-xs text-gray-500 text-center mt-2">
-                    Mon-Sat, 9AM-6PM IST
+                    Mon-Sat, 10AM-7PM IST
                   </p>
                 </a>
 
@@ -204,7 +204,7 @@ export default function Contact() {
                     skyimex1@gmail.com
                   </p>
                   <p className="text-xs text-gray-500 text-center mt-2">
-                    We reply within 24 hours
+                    We reply as soon as possible
                   </p>
                 </a>
 
@@ -222,7 +222,7 @@ export default function Contact() {
                     Mon - Sat
                   </p>
                   <p className="text-xs text-gray-500 text-center mt-2">
-                    9:00 AM - 6:00 PM IST
+                    10:00 AM - 7:00 PM IST
                   </p>
                 </div>
 
@@ -251,7 +251,7 @@ export default function Contact() {
                         </h3>
                         <p className="text-gray-600 mb-6">
                           Thank you for reaching out. Our team will review your
-                          project details and contact you within 24 hours.
+                          project details and contact you as soon as possible.
                         </p>
                         <div className="bg-green-50 rounded-xl p-6 border border-green-200 mb-6">
                           <p className="text-sm font-semibold text-gray-700 mb-3">
@@ -269,7 +269,7 @@ export default function Contact() {
                             <li className="flex items-start gap-2">
                               <span className="text-green-600 mt-0.5">✓</span>
                               <span>
-                                You'll receive a call or email within 24 hours
+                                You'll receive a call or email as soon as possible
                               </span>
                             </li>
                           </ul>
@@ -291,7 +291,7 @@ export default function Contact() {
                         </h2>
                         <p className="text-gray-600">
                           Fill out the form below and we'll get back to you
-                          within 24 hours
+                          as soon as possible
                         </p>
                       </div>
 

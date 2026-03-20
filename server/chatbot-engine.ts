@@ -80,7 +80,7 @@ const knowledgeBase: FAQItem[] = [
   },
   {
     keywords: ['contact', 'reach', 'email', 'phone', 'call', 'message', 'touch'],
-    response: "I'd love to connect you with our expert team! We're here to help bring your project to life. 📞\n\n**How to Reach Us:**\n\n📧 **Email & Contact Form**\n   • Visit our Contact page to send us a detailed inquiry\n   • We respond within 24 hours (business days)\n   • Attach project specifications or drawings if available\n\n📱 **Phone & WhatsApp**\n   • Find our contact numbers on the website\n   • Available during business hours (9 AM - 6 PM IST)\n   • Direct line to our project consultants\n\n🌍 **Office Locations:**\n   • **China Office (Foshan)** - Manufacturing coordination\n   • **Chennai Hub** - Main operations & logistics\n   • **Madurai Center** - Regional support\n\n💼 **What to Include in Your Inquiry:**\n   ✓ Project type and scope\n   ✓ Timeline requirements\n   ✓ Approximate budget range\n   ✓ Any specific requirements or preferences\n\nOur team will get back to you with a customized solution proposal!",
+    response: "I'd love to connect you with our expert team! We're here to help bring your project to life. 📞\n\n**How to Reach Us:**\n\n📧 **Email & Contact Form**\n   • Visit our Contact page to send us a detailed inquiry\n   • We respond as soon as possible (business days)\n   • Attach project specifications or drawings if available\n\n📱 **Phone & WhatsApp**\n   • Find our contact numbers on the website\n   • Available during business hours (10 AM - 7 PM IST)\n   • Direct line to our project consultants\n\n🌍 **Office Locations:**\n   • **China Office (Foshan)** - Manufacturing coordination\n   • **Chennai Hub** - Main operations & logistics\n   • **Madurai Center** - Regional support\n\n💼 **What to Include in Your Inquiry:**\n   ✓ Project type and scope\n   ✓ Timeline requirements\n   ✓ Approximate budget range\n   ✓ Any specific requirements or preferences\n\nOur team will get back to you with a customized solution proposal!",
     quickReplies: ['Go to contact page', 'Tell me about services', 'View projects', 'Request a quote']
   },
   {
@@ -172,9 +172,9 @@ export class ChatbotEngine {
       return "\n\n*Note: Our team is currently enjoying the weekend but will respond to your inquiry first thing Monday morning!* 🌟";
     }
 
-    // Business hours: 9 AM - 6 PM
-    if (hour < 9 || hour >= 18) {
-      return "\n\n*Note: Our team has stepped out for the day but will get back to you during business hours (9 AM - 6 PM IST)!* 🌙";
+    // Business hours: 10 AM - 7 PM
+    if (hour < 10 || hour >= 19) {
+      return "\n\n*Note: Our team has stepped out for the day but will get back to you during business hours (10 AM - 7 PM IST)!* 🌙";
     }
 
     return "";

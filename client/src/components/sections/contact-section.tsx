@@ -98,7 +98,7 @@ export default function ContactSection() {
 
       toast({
         title: "Thank you for your inquiry!",
-        description: "We'll contact you within 24 hours to discuss your project.",
+        description: "We'll contact you as soon as possible to discuss your project.",
       });
 
       form.reset();
@@ -142,7 +142,7 @@ export default function ContactSection() {
                     Inquiry Received!
                   </h3>
                   <p className="text-lg text-gray-600 mb-6">
-                    Thank you for reaching out. Our team will review your project details and contact you within 24 hours.
+                    Thank you for reaching out. Our team will review your project details and contact you as soon as possible.
                   </p>
                   <div className="bg-green-50 rounded-xl p-6 border border-green-200">
                     <p className="text-sm text-gray-700 mb-2">
@@ -159,7 +159,7 @@ export default function ContactSection() {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-green-600 mt-0.5">✓</span>
-                        <span>You'll receive a call or email within 24 hours</span>
+                        <span>You'll receive a call or email as soon as possible</span>
                       </li>
                     </ul>
                   </div>
