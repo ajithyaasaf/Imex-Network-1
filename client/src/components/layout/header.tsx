@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useScroll } from "@/hooks/use-scroll";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import logoPath from "@assets/Logo_1755174068526.png";
+import logoPath from "@assets/new_logo.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -101,14 +101,14 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center" data-testid="logo-imex">
+          <div className="flex items-center relative h-12 sm:h-16 w-32 sm:w-40 md:w-48" data-testid="logo-imex">
             <img
               src={logoPath}
               alt="IMEX - A Division of IMEXAO - Connecting Globally"
               className={`w-auto object-contain transition-all duration-300 ${isScrolled
-                ? "h-12 sm:h-14 md:h-16"
-                : "h-16 sm:h-20 md:h-24"
-                }`}
+                ? "h-16 sm:h-20 md:h-24"
+                : "h-24 sm:h-32 md:h-40"
+                } absolute left-0 top-1/2 -translate-y-1/2 scale-110 sm:scale-125 md:scale-135 origin-left drop-shadow-2xl`}
             />
           </div>
 

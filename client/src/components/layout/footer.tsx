@@ -1,5 +1,5 @@
 import { Mail, Phone, Globe } from "lucide-react";
-import logoPath from "@assets/Logo_1755174068526.png";
+import logoPath from "@assets/new_logo.png";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -12,14 +12,14 @@ export default function Footer() {
   return (
     <footer className="bg-imex-gray text-white py-16" data-testid="footer">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
           {/* Company Info */}
           <div>
-            <div className="mb-6">
+            <div className="relative h-16 mb-24">
               <img
                 src={logoPath}
                 alt="IMEX - A Division of IMEXAO - Connecting Globally"
-                className="h-20 w-auto object-contain mb-4 filter brightness-150 contrast-200"
+                className="h-56 w-auto object-contain absolute left-0 -top-20 filter brightness-150 contrast-125 drop-shadow-2xl z-20"
               />
             </div>
             <p className="text-gray-300 mb-4">
