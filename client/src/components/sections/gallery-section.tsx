@@ -3,25 +3,19 @@ import { useInView } from "react-intersection-observer";
 import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import img1 from "@assets/WhatsApp Image 2025-09-11 at 1.38.49 PM (1)_1759733497299.jpeg";
-import img2 from "@assets/WhatsApp Image 2025-09-11 at 1.38.49 PM (2)_1759733497300.jpeg";
 import img3 from "@assets/WhatsApp Image 2025-09-11 at 1.38.49 PM_1759733497302.jpeg";
-import img4 from "@assets/WhatsApp Image 2025-09-11 at 1.38.50 PM (1)_1759733497303.jpeg";
 import img5 from "@assets/WhatsApp Image 2025-09-11 at 1.38.50 PM (2)_1759733497305.jpeg";
 import img6 from "@assets/WhatsApp Image 2025-09-11 at 1.38.50 PM_1759733497306.jpeg";
 import img7 from "@assets/WhatsApp Image 2025-09-11 at 1.38.51 PM (1)_1759733497307.jpeg";
 import img8 from "@assets/WhatsApp Image 2025-09-11 at 1.38.51 PM (2)_1759733497308.jpeg";
 import img9 from "@assets/WhatsApp Image 2025-09-11 at 1.38.51 PM_1759733497309.jpeg";
 import img10 from "@assets/WhatsApp Image 2025-09-11 at 1.38.52 PM (1)_1759733497310.jpeg";
-import img11 from "@assets/WhatsApp Image 2025-09-11 at 1.38.52 PM_1759733497311.jpeg";
 import img12 from "@assets/WhatsApp Image 2025-09-11 at 1.38.53 PM (1)_1759733497312.jpeg";
 import img13 from "@assets/WhatsApp Image 2025-09-11 at 1.38.53 PM (2)_1759733497313.jpeg";
-import img14 from "@assets/WhatsApp Image 2025-09-11 at 1.38.53 PM_1759733497314.jpeg";
 import img15 from "@assets/WhatsApp Image 2025-09-11 at 1.38.54 PM (1)_1759733497315.jpeg";
 import img16 from "@assets/WhatsApp Image 2025-09-11 at 1.38.54 PM (2)_1759733497316.jpeg";
 import img17 from "@assets/WhatsApp Image 2025-09-11 at 1.38.54 PM_1759739312049.jpeg";
 import img18 from "@assets/WhatsApp Image 2025-09-11 at 1.38.55 PM (1)_1759739312051.jpeg";
-import img19 from "@assets/WhatsApp Image 2025-09-11 at 1.38.55 PM (2)_1759739312052.jpeg";
 import img20 from "@assets/WhatsApp Image 2025-09-11 at 1.38.55 PM_1759739312053.jpeg";
 import img21 from "@assets/WhatsApp Image 2025-09-11 at 1.38.56 PM (1)_1759739312054.jpeg";
 import img22 from "@assets/WhatsApp Image 2025-09-11 at 1.38.56 PM (2)_1759739312056.jpeg";
@@ -32,7 +26,6 @@ import img26 from "@assets/WhatsApp Image 2025-09-11 at 1.38.57 PM_1759739312059
 import img27 from "@assets/WhatsApp Image 2025-09-11 at 1.38.58 PM (1)_1759739312059.jpeg";
 import img28 from "@assets/WhatsApp Image 2025-09-11 at 1.38.58 PM (2)_1759739312060.jpeg";
 import img29 from "@assets/WhatsApp Image 2025-09-11 at 1.38.58 PM_1759739312061.jpeg";
-import img30 from "@assets/WhatsApp Image 2025-09-11 at 1.38.59 PM (1)_1759739312061.jpeg";
 import img31 from "@assets/WhatsApp Image 2025-09-11 at 1.38.59 PM (2)_1759739312062.jpeg";
 import img32 from "@assets/WhatsApp Image 2025-09-11 at 1.38.59 PM_1759739312062.jpeg";
 import img33 from "@assets/WhatsApp Image 2025-09-11 at 1.39.00 PM (1)_1759739312063.jpeg";
@@ -55,56 +48,52 @@ import img49 from "@assets/WhatsApp Image 2025-09-11 at 1.39.05 PM_1759743431576
 import img50 from "@assets/WhatsApp Image 2025-09-11 at 1.39.06 PM_1759743431576.jpeg";
 
 const galleryData = [
-  { id: 1, image: img1, height: 450 },
-  { id: 2, image: img2, height: 280 },
-  { id: 3, image: img3, height: 380 },
-  { id: 4, image: img4, height: 320 },
-  { id: 5, image: img5, height: 500 },
-  { id: 6, image: img6, height: 290 },
-  { id: 7, image: img7, height: 350 },
-  { id: 8, image: img8, height: 420 },
-  { id: 9, image: img9, height: 260 },
-  { id: 10, image: img10, height: 480 },
-  { id: 11, image: img11, height: 310 },
-  { id: 12, image: img12, height: 390 },
-  { id: 13, image: img13, height: 440 },
-  { id: 14, image: img14, height: 270 },
-  { id: 15, image: img15, height: 360 },
-  { id: 16, image: img16, height: 330 },
-  { id: 17, image: img17, height: 470 },
-  { id: 18, image: img18, height: 300 },
-  { id: 19, image: img19, height: 410 },
-  { id: 20, image: img20, height: 340 },
-  { id: 21, image: img21, height: 290 },
-  { id: 22, image: img22, height: 460 },
-  { id: 23, image: img23, height: 370 },
-  { id: 24, image: img24, height: 320 },
-  { id: 25, image: img25, height: 400 },
-  { id: 26, image: img26, height: 310 },
-  { id: 27, image: img27, height: 430 },
-  { id: 28, image: img28, height: 280 },
-  { id: 29, image: img29, height: 350 },
-  { id: 30, image: img30, height: 390 },
-  { id: 31, image: img31, height: 270 },
-  { id: 32, image: img32, height: 420 },
-  { id: 33, image: img33, height: 450 },
-  { id: 34, image: img34, height: 300 },
-  { id: 35, image: img35, height: 360 },
-  { id: 36, image: img36, height: 380 },
-  { id: 37, image: img37, height: 320 },
-  { id: 38, image: img38, height: 340 },
-  { id: 39, image: img39, height: 290 },
-  { id: 40, image: img40, height: 370 },
-  { id: 41, image: img41, height: 450 },
-  { id: 42, image: img42, height: 390 },
-  { id: 43, image: img43, height: 410 },
-  { id: 44, image: img44, height: 330 },
-  { id: 45, image: img45, height: 400 },
-  { id: 46, image: img46, height: 420 },
-  { id: 47, image: img47, height: 350 },
-  { id: 48, image: img48, height: 380 },
-  { id: 49, image: img49, height: 340 },
-  { id: 50, image: img50, height: 480 },
+  // Page 1 Curated Mix (Items 1-15)
+  { id: 1, image: img3, height: 380 },    // Room
+  { id: 2, image: img7, height: 350 },    // Dining
+  { id: 3, image: img10, height: 480 },   // Public
+  { id: 4, image: img5, height: 500 },    // Room
+  { id: 5, image: img8, height: 420 },    // Dining
+  { id: 6, image: img12, height: 390 },   // Public
+  { id: 7, image: img6, height: 290 },    // Room
+  { id: 8, image: img9, height: 260 },    // Dining
+  { id: 9, image: img13, height: 440 },   // Dining
+  { id: 10, image: img17, height: 470 },  // Public
+  { id: 11, image: img15, height: 360 },  // Room
+  { id: 12, image: img18, height: 300 },  // Dining
+  { id: 13, image: img20, height: 340 },  // Dining
+  { id: 14, image: img16, height: 330 },  // Room
+  { id: 15, image: img36, height: 450 },  // Public
+
+  // Remaining Images Sequential
+  { id: 16, image: img21, height: 290 },
+  { id: 17, image: img22, height: 460 },
+  { id: 18, image: img23, height: 370 },
+  { id: 19, image: img24, height: 320 },
+  { id: 20, image: img25, height: 400 },
+  { id: 21, image: img26, height: 310 },
+  { id: 22, image: img27, height: 430 },
+  { id: 23, image: img28, height: 280 },
+  { id: 24, image: img29, height: 350 },
+  { id: 25, image: img31, height: 270 },
+  { id: 26, image: img32, height: 420 },
+  { id: 27, image: img33, height: 450 },
+  { id: 28, image: img34, height: 300 },
+  { id: 29, image: img35, height: 360 },
+  { id: 30, image: img37, height: 320 },
+  { id: 31, image: img38, height: 340 },
+  { id: 32, image: img39, height: 290 },
+  { id: 33, image: img40, height: 370 },
+  { id: 34, image: img41, height: 450 },
+  { id: 35, image: img42, height: 390 },
+  { id: 36, image: img43, height: 410 },
+  { id: 37, image: img44, height: 330 },
+  { id: 38, image: img45, height: 400 },
+  { id: 39, image: img46, height: 420 },
+  { id: 40, image: img47, height: 350 },
+  { id: 41, image: img48, height: 380 },
+  { id: 42, image: img49, height: 340 },
+  { id: 43, image: img50, height: 480 },
 ];
 
 export default function GallerySection() {
