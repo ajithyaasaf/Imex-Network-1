@@ -4,9 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import img3 from "@assets/WhatsApp Image 2025-09-11 at 1.38.49 PM_1759733497302.jpeg";
-import img5 from "@assets/WhatsApp Image 2025-09-11 at 1.38.50 PM (2)_1759733497305.jpeg";
-import img6 from "@assets/WhatsApp Image 2025-09-11 at 1.38.50 PM_1759733497306.jpeg";
-import img7 from "@assets/WhatsApp Image 2025-09-11 at 1.38.51 PM (1)_1759733497307.jpeg";
+
 import img8 from "@assets/WhatsApp Image 2025-09-11 at 1.38.51 PM (2)_1759733497308.jpeg";
 import img9 from "@assets/WhatsApp Image 2025-09-11 at 1.38.51 PM_1759733497309.jpeg";
 import img10 from "@assets/WhatsApp Image 2025-09-11 at 1.38.52 PM (1)_1759733497310.jpeg";
@@ -49,51 +47,49 @@ import img50 from "@assets/WhatsApp Image 2025-09-11 at 1.39.06 PM_1759743431576
 
 const galleryData = [
   // Page 1 Curated Mix (Items 1-15)
-  { id: 1, image: img3, height: 380 },    // Room
-  { id: 2, image: img7, height: 350 },    // Dining
-  { id: 3, image: img10, height: 480 },   // Public
-  { id: 4, image: img5, height: 500 },    // Room
-  { id: 5, image: img8, height: 420 },    // Dining
-  { id: 6, image: img12, height: 390 },   // Public
-  { id: 7, image: img6, height: 290 },    // Room
-  { id: 8, image: img9, height: 260 },    // Dining
-  { id: 9, image: img13, height: 440 },   // Dining
-  { id: 10, image: img17, height: 470 },  // Public
-  { id: 11, image: img15, height: 360 },  // Room
-  { id: 12, image: img18, height: 300 },  // Dining
-  { id: 13, image: img20, height: 340 },  // Dining
-  { id: 14, image: img16, height: 330 },  // Room
-  { id: 15, image: img36, height: 450 },  // Public
+  // Page 1 — Beds first
+  { id: 1, image: img3, height: 380 },    // Room (Two beds)
+  { id: 2, image: img15, height: 360 },   // Room
+  { id: 3, image: img8, height: 420 },    // Dining
+  { id: 4, image: img10, height: 480 },   // Public
+  { id: 5, image: img9, height: 260 },    // Dining
+  { id: 6, image: img13, height: 440 },   // Dining
+  { id: 7, image: img17, height: 470 },   // Public
+  { id: 8, image: img12, height: 390 },   // Public
+  { id: 9, image: img18, height: 300 },   // Dining
+  { id: 10, image: img20, height: 340 },  // Dining
+  { id: 11, image: img16, height: 330 },  // Room
+  { id: 12, image: img36, height: 450 },  // Public
+  { id: 13, image: img21, height: 290 },
+  { id: 14, image: img22, height: 460 },
+  { id: 15, image: img23, height: 370 },
 
   // Remaining Images Sequential
-  { id: 16, image: img21, height: 290 },
-  { id: 17, image: img22, height: 460 },
-  { id: 18, image: img23, height: 370 },
-  { id: 19, image: img24, height: 320 },
-  { id: 20, image: img25, height: 400 },
-  { id: 21, image: img26, height: 310 },
-  { id: 22, image: img27, height: 430 },
-  { id: 23, image: img28, height: 280 },
-  { id: 24, image: img29, height: 350 },
-  { id: 25, image: img31, height: 270 },
-  { id: 26, image: img32, height: 420 },
-  { id: 27, image: img33, height: 450 },
-  { id: 28, image: img34, height: 300 },
-  { id: 29, image: img35, height: 360 },
-  { id: 30, image: img37, height: 320 },
-  { id: 31, image: img38, height: 340 },
-  { id: 32, image: img39, height: 290 },
-  { id: 33, image: img40, height: 370 },
-  { id: 34, image: img41, height: 450 },
-  { id: 35, image: img42, height: 390 },
-  { id: 36, image: img43, height: 410 },
-  { id: 37, image: img44, height: 330 },
-  { id: 38, image: img45, height: 400 },
-  { id: 39, image: img46, height: 420 },
-  { id: 40, image: img47, height: 350 },
-  { id: 41, image: img48, height: 380 },
-  { id: 42, image: img49, height: 340 },
-  { id: 43, image: img50, height: 480 },
+  { id: 16, image: img24, height: 320 },
+  { id: 17, image: img25, height: 400 },
+  { id: 18, image: img26, height: 310 },
+  { id: 19, image: img27, height: 430 },
+  { id: 20, image: img28, height: 280 },
+  { id: 21, image: img29, height: 350 },
+  { id: 22, image: img31, height: 270 },
+  { id: 23, image: img32, height: 420 },
+  { id: 24, image: img33, height: 450 },
+  { id: 25, image: img34, height: 300 },
+  { id: 26, image: img35, height: 360 },
+  { id: 27, image: img37, height: 320 },
+  { id: 28, image: img38, height: 340 },
+  { id: 29, image: img39, height: 290 },
+  { id: 30, image: img40, height: 370 },
+  { id: 31, image: img41, height: 450 },
+  { id: 32, image: img42, height: 390 },
+  { id: 33, image: img43, height: 410 },
+  { id: 34, image: img44, height: 330 },
+  { id: 35, image: img45, height: 400 },
+  { id: 36, image: img46, height: 420 },
+  { id: 37, image: img47, height: 350 },
+  { id: 38, image: img48, height: 380 },
+  { id: 39, image: img49, height: 340 },
+  { id: 40, image: img50, height: 480 },
 ];
 
 export default function GallerySection() {
