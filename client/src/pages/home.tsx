@@ -6,6 +6,7 @@ import AboutSection from "@/components/sections/about-section";
 import ServicesSection from "@/components/sections/services-section";
 import MarketsSection from "@/components/sections/markets-section";
 import GallerySection from "@/components/sections/gallery-section";
+import MdProfileSection from "@/components/sections/md-profile-section";
 import TrustedBySection from "@/components/sections/trusted-by-section";
 import FAQSection from "@/components/sections/faq-section";
 import { Link } from "wouter";
@@ -20,6 +21,7 @@ export default function Home() {
         <StatsSection />
         <AboutSection />
         <GallerySection />
+        <MdProfileSection />
         <TrustedBySection />
 
         {/* Quick Access Section */}

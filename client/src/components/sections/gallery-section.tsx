@@ -130,7 +130,7 @@ export default function GallerySection() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!lightboxOpen) return;
-      
+
       if (e.key === "Escape") {
         closeLightbox();
       } else if (e.key === "ArrowLeft") {
@@ -155,7 +155,7 @@ export default function GallerySection() {
         const yOffset = -100;
         const y = sectionRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
-        
+
         setTimeout(() => {
           setCurrentPage(page);
         }, 300);
@@ -176,7 +176,7 @@ export default function GallerySection() {
             Explore our collection of moments, projects, and achievements that showcase our journey and commitment to excellence
           </p>
         </div>
-        
+
         <div className="w-full max-w-7xl mx-auto overflow-x-hidden">
           <Component key={currentPage} data={currentImages} inView={inView} onImageClick={openLightbox} />
         </div>
@@ -192,7 +192,7 @@ export default function GallerySection() {
           >
             <ChevronLeft className="h-4 w-4" />
           </Button>
-          
+
           {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
             <Button
               key={page}
@@ -205,7 +205,7 @@ export default function GallerySection() {
               {page}
             </Button>
           ))}
-          
+
           <Button
             variant="outline"
             size="sm"
