@@ -56,7 +56,7 @@ export default function MdProfileSection() {
                 <div className="relative mb-8">
                   <Quote className="absolute -top-4 -left-4 w-12 h-12 text-gray-100 rotate-180 z-0" />
                   <h3 className="relative z-10 text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                    "Our promise is to deliver great results and build partnerships that last."
+                    "Delivering high-quality results and building strong partnerships."
                   </h3>
                 </div>
 
