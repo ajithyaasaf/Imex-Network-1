@@ -14,7 +14,7 @@ export default function MdProfileSection() {
             
             {/* Visual Side (Left) */}
             <div className="w-full lg:w-1/2 relative">
-              <ScrollReveal direction="left">
+              <ScrollReveal>
                 {/* Accent Background */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-imex-red/10 to-purple-100 rounded-3xl transform -rotate-3 scale-105 z-0"></div>
                 
@@ -44,7 +44,7 @@ export default function MdProfileSection() {
 
             {/* Content Side (Right) */}
             <div className="w-full lg:w-1/2">
-              <ScrollReveal direction="right" delay={0.2}>
+              <ScrollReveal delay={0.2}>
                 
                 {/* Eyebrow */}
                 <div className="inline-flex items-center gap-2 bg-imex-red/10 text-imex-red px-4 py-1.5 rounded-full mb-6">
