@@ -3,7 +3,7 @@ import { Quote, User } from "lucide-react";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 
 // A placeholder image is used here. You can swap this with the actual photo of Mr. Ayas.
-import mdImage from "@/assets/Profile.png";
+import mdImage from "@/assets/profile 2.jpeg";
 
 export default function MdProfileSection() {
   return (
@@ -12,38 +12,8 @@ export default function MdProfileSection() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
-            {/* Visual Side (Left) */}
-            <div className="w-full lg:w-1/2 relative">
-              <ScrollReveal>
-                {/* Accent Background */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-imex-red/10 to-purple-100 rounded-3xl transform -rotate-3 scale-105 z-0"></div>
-
-                {/* Image Container */}
-                <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white">
-                  <img
-                    src={mdImage}
-                    alt="Ayas - Managing Director, IMEX"
-                    className="w-full h-auto object-cover aspect-[4/3] lg:aspect-[4/5]"
-                  />
-                  {/* Overlay Gradient for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-
-                  {/* Floating Badge on Image */}
-                  <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm px-5 py-3 rounded-2xl flex items-center gap-3 shadow-lg">
-                    <div className="w-10 h-10 bg-imex-red/10 rounded-full flex items-center justify-center">
-                      <User className="w-5 h-5 text-imex-red" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-bold text-gray-900">Ayas</div>
-                      <div className="text-xs text-gray-600">Managing Director</div>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Content Side (Right) */}
-            <div className="w-full lg:w-1/2">
+            {/* Content Side (Left) */}
+            <div className="w-full lg:w-1/2 order-2 lg:order-1">
               <ScrollReveal delay={0.2}>
 
                 {/* Eyebrow */}
@@ -77,6 +47,36 @@ export default function MdProfileSection() {
                   </p>
                 </div>
 
+              </ScrollReveal>
+            </div>
+
+            {/* Visual Side (Right) */}
+            <div className="w-full lg:w-1/2 relative order-1 lg:order-2">
+              <ScrollReveal>
+                {/* Accent Background */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-imex-red/10 to-purple-100 rounded-3xl transform rotate-3 scale-105 z-0"></div>
+
+                {/* Image Container */}
+                <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white">
+                  <img
+                    src={mdImage}
+                    alt="Ayas - Managing Director, IMEX"
+                    className="w-full h-auto object-cover aspect-square"
+                  />
+                  {/* Overlay Gradient for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+
+                  {/* Floating Badge on Image */}
+                  <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm px-5 py-3 rounded-2xl flex items-center gap-3 shadow-lg">
+                    <div className="w-10 h-10 bg-imex-red/10 rounded-full flex items-center justify-center">
+                      <User className="w-5 h-5 text-imex-red" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-bold text-gray-900">Ayas</div>
+                      <div className="text-xs text-gray-600">Managing Director</div>
+                    </div>
+                  </div>
+                </div>
               </ScrollReveal>
             </div>
 
