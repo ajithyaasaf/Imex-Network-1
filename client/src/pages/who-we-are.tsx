@@ -4,6 +4,7 @@ import ProcessSection from "@/components/sections/process-section";
 import CulturalBridgeSection from "@/components/sections/cultural-bridge-section";
 import AchievementsSection from "@/components/sections/achievements-section";
 import bannerImage from "@assets/1_1765189672715.png";
+import MdProfileSection from "@/components/sections/md-profile-section";
 import { 
   Search, 
   Handshake, 
@@ -69,6 +70,8 @@ export default function WhoWeAre() {
             </motion.div>
           </div>
         </section>
+
+        <MdProfileSection />
 
         {/* Animated Value Proposition */}
         <section className="py-24 bg-white relative">
