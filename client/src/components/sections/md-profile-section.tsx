@@ -3,7 +3,7 @@ import { Quote, User } from "lucide-react";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 
 // A placeholder image is used here. You can swap this with the actual photo of Mr. Ayas.
-import mdImage from "@/assets/profile 2.jpeg";
+import mdImage from "@/assets/profile 2.png";
 
 export default function MdProfileSection() {
   return (
@@ -63,8 +63,6 @@ export default function MdProfileSection() {
                     alt="Ayas - Managing Director, IMEX"
                     className="w-full h-auto object-cover aspect-square"
                   />
-                  {/* Overlay Gradient for depth */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
 
                   {/* Floating Badge on Image */}
                   <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm px-5 py-3 rounded-2xl flex items-center gap-3 shadow-lg">
