@@ -5,6 +5,8 @@ import { useScroll } from "@/hooks/use-scroll";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import logoPath from "@assets/new_logo.png";
+import secondaryLogoPath from "@assets/300 X 80.jpg.jpeg";
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -165,6 +167,13 @@ export default function Header() {
                 Contact Us
               </Button>
             </Link>
+            <div className="flex items-center ml-4 pl-4 border-l border-white/20">
+              <img 
+                src={secondaryLogoPath} 
+                alt="IMEX Secondary Logo" 
+                className={`w-auto object-contain transition-all duration-300 ${isScrolled ? "h-10" : "h-14"}`}
+              />
+            </div>
           </div>
 
           {/* Mobile menu button */}
