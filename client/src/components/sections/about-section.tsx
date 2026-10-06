@@ -67,7 +67,7 @@ export default function AboutSection({ hideVideoSection = false }: AboutSectionP
               </h2>
               <div className="max-w-4xl mx-auto">
                 <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-                  We started <span className="text-imex-red font-semibold">IMEX</span> with one goal: to make international sourcing easy for everyone.
+                  We started <span className="text-imex-red font-semibold">IMEX Global</span> with one goal: to make international sourcing easy for everyone.
                 </p>
                 <p className="mt-4 text-lg text-gray-500 leading-relaxed">
                   We know how difficult it can be to find reliable partners and keep quality high. That’s why we handle all the hard parts of importing—so you can focus on growing your business with confidence.
@@ -104,7 +104,7 @@ export default function AboutSection({ hideVideoSection = false }: AboutSectionP
 
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pointer-events-none">
                   <p className="text-white text-lg font-semibold">
-                    Watch Our Brand Film: The IMEX Story
+                    Watch Our Brand Film: The IMEX Global Story
                   </p>
                   <p className="text-white/80 text-sm">
                     Our journey of excellence and partnership
@@ -187,7 +187,7 @@ export default function AboutSection({ hideVideoSection = false }: AboutSectionP
         >
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              The IMEX Commitment
+              The IMEX Global Commitment
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our promises to you, designed to ensure your success at every step

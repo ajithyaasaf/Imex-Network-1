@@ -117,7 +117,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-600 mt-12 pt-8">
           <p className="text-gray-400 text-center mb-3" data-testid="footer-copyright">
-            &copy; 2025 IMEX - Division of IMEXAO (利华盛贸易有限公司). All
+            &copy; 2025 IMEX Global - Division of IMEXAO (利华盛贸易有限公司). All
             rights reserved.
           </p>
           <p className="text-gray-500 text-center text-sm">

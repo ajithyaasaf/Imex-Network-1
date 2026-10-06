@@ -164,7 +164,7 @@ export default function Services() {
             <ScrollReveal>
               <div className="text-center mb-20">
                 <h2 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-                  The IMEX-Process Chart
+                  The IMEX Global Process Chart
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                   Follow the path from sourcing to installation—every checkpoint
@@ -337,7 +337,7 @@ export default function Services() {
             <ScrollReveal>
               <div className="text-center mb-16">
                 <h2 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-                  The IMEX Impact
+                  The IMEX Global Impact
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                   See how we transform businesses globally with our

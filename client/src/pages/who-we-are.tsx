@@ -5,14 +5,14 @@ import CulturalBridgeSection from "@/components/sections/cultural-bridge-section
 import AchievementsSection from "@/components/sections/achievements-section";
 import bannerImage from "@assets/1_1765189672715.png";
 import MdProfileSection from "@/components/sections/md-profile-section";
-import { 
-  Search, 
-  Handshake, 
-  CircleDollarSign, 
-  FileText, 
-  Landmark, 
-  ShieldCheck, 
-  Truck 
+import {
+  Search,
+  Handshake,
+  CircleDollarSign,
+  FileText,
+  Landmark,
+  ShieldCheck,
+  Truck
 } from "lucide-react";
 
 // Import Framer Motion for modern animations
@@ -65,7 +65,7 @@ export default function WhoWeAre() {
                 Who We Are
               </motion.h1>
               <motion.p variants={fadeInUp} className="text-xl md:text-2xl opacity-90 leading-relaxed font-light">
-                Built on 19 years of expertise, IMEX bridges global supply gaps with comprehensive sourcing, quality-driven procurement, and end-to-end trade solutions.
+                Built on 19 years of expertise, IMEX Global bridges global supply gaps with comprehensive sourcing, quality-driven procurement, and end-to-end trade solutions.
               </motion.p>
             </motion.div>
           </div>
@@ -73,7 +73,7 @@ export default function WhoWeAre() {
 
         <MdProfileSection />
 
-        {/* Animated Value Proposition */}
+        {/* Animated Value Proposition */}ṇ
         <section className="py-24 bg-white relative">
           {/* Decorative Background Blob */}
           <div className="absolute top-0 left-0 w-96 h-96 bg-red-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob" />
@@ -92,7 +92,7 @@ export default function WhoWeAre() {
                 Your Global Import, Export & Sourcing Partner
               </h2>
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                IMEX provides comprehensive, end-to-end solutions for importing goods from China's thriving markets to businesses worldwide. We offer A-to-Z services, ensuring smooth and efficient product sourcing and delivery to any destination.
+                IMEX Global provides comprehensive, end-to-end solutions for importing goods from China's thriving markets to businesses worldwide. We offer A-to-Z services, ensuring smooth and efficient product sourcing and delivery to any destination.
               </p>
             </motion.div>
 

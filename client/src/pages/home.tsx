@@ -30,7 +30,7 @@ export default function Home() {
                 Explore Our World
               </h2>
               <p className="text-lg text-gray-600 mb-16 max-w-4xl mx-auto">
-                Discover how IMEX can transform your business with our
+                Discover how IMEX Global can transform your business with our
                 comprehensive suite of global solutions
               </p>
 
@@ -148,7 +148,7 @@ export default function Home() {
                   Ready to Go Global?
                 </h2>
                 <p className="text-xl opacity-90 mb-12 leading-relaxed text-white">
-                  Join hundreds of successful businesses that trust IMEX for
+                  Join hundreds of successful businesses that trust IMEX Global for
                   their international expansion
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -202,7 +202,7 @@ export default function ProcessSection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6" data-testid="text-process-title">
-            The IMEX Blueprint: Your 8-Step Journey from Vision to Reality
+            The IMEX Global Blueprint: Your 8-Step Journey from Vision to Reality
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed" data-testid="text-process-description">
             Our proven process is designed to ensure quality, transparency, and on-time delivery for every client.

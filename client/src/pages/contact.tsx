@@ -57,7 +57,7 @@ const offices = [
     country: "India",
     type: "Headquarters",
     address: "18 C, Rayala Towers - III, 158, Anna Salai, Chennai - 600 002",
-    phones: ["+91 98421 33807", "+91 44 23506452"],
+    phones: ["+91 98421 33807"],
     email: "skyimex1@gmail.com",
     hours: "Mon-Sat: 10AM-7PM IST",
     mapUrl:
@@ -69,7 +69,7 @@ const offices = [
     country: "India",
     type: "Regional Office",
     address: "No. 82, Pandiya Vellalar Street, Madurai, Tamilnadu - 625 001",
-    phones: ["+91 98421 33807", "+91 0452 4382072"],
+    phones: ["+91 98421 33807"],
     email: "skyimex1@gmail.com",
     hours: "Mon-Sat: 10AM-7PM IST",
     mapUrl:

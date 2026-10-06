@@ -50,7 +50,7 @@ export default function CulturalBridgeSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-white/90 max-w-3xl mx-auto"
           >
-            IMEX doesn't just import products – we connect cultures, craft relationships, and create possibilities
+            IMEX Global doesn't just import products – we connect cultures, craft relationships, and create possibilities
           </motion.p>
         </div>
 

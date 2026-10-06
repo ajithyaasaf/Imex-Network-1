@@ -33,7 +33,7 @@ export default function MdProfileSection() {
                 {/* The Story */}
                 <div className="space-y-4 text-gray-600 text-lg mb-10">
                   <p>
-                    At IMEX, we believe that real success comes from trust, top-quality work, and always finding better ways to do things. From day one, our goal has been to give businesses the best solutions to help them grow and succeed.
+                    At IMEX Global, we believe that real success comes from trust, top-quality work, and always finding better ways to do things. From day one, our goal has been to give businesses the best solutions to help them grow and succeed.
                   </p>
                   <p>
                     We care deeply about your vision in every project we take on. We don't just supply materials; we work closely with you to bring your big ideas to life. By combining our worldwide experience with local knowledge, we make sure everything we do meets the highest standards.
@@ -60,7 +60,7 @@ export default function MdProfileSection() {
                 <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border border-white">
                   <img
                     src={mdImage}
-                    alt="Ayas - Managing Director, IMEX"
+                    alt="Ayas - Managing Director, IMEX Global"
                     className="w-full h-auto object-cover aspect-square"
                   />
 
