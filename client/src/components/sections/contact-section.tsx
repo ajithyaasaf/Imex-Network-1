@@ -42,7 +42,7 @@ const offices = [
     city: "Chennai, India",
     type: "Headquarters",
     address: "18 C, Rayala Towers - III, 158, Anna Salai, Chennai - 600 002",
-    phones: ["+91 98431 10585", "+91 44 23506452"],
+    phones: ["+91 98421 33807", "+91 44 23506452"],
     email: "skyimex1@gmail.com",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8411523694734!2d80.25423831482189!3d13.047985290802974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267a68e3f8b0f%3A0x3e1c8df1b78e8f8e!2sAnna%20Salai%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin",
   },
@@ -51,7 +51,7 @@ const offices = [
     city: "Madurai, India",
     type: "Regional Office",
     address: "No. 82, Pandiya Vellalar Street, Madurai, Tamilnadu - 625 001",
-    phones: ["+91 98431 33807", "+91 0452 4382072"],
+    phones: ["+91 98421 33807", "+91 0452 4382072"],
     email: "skyimex1@gmail.com",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.7665894717595!2d78.11947631482006!3d9.925201292851234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c582b1189633%3A0xdc955b7264f63933!2sMadurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin",
   },
@@ -426,12 +426,12 @@ export default function ContactSection() {
                   Call our headquarters directly for urgent inquiries
                 </p>
                 <a
-                  href="tel:+919843110585"
+                  href="tel:+919842133807"
                   className="flex items-center justify-center gap-2 bg-white text-imex-red font-semibold py-3 px-6 rounded-xl hover:bg-gray-100 transition-colors"
                   data-testid="link-call-headquarters"
                 >
                   <Phone className="w-5 h-5" />
-                  +91 98431 10585
+                  +91 98421 33807
                 </a>
               </div>
             </div>

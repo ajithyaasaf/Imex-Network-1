@@ -91,10 +91,10 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-imex-red mr-3 mt-1" />
                 <div className="flex flex-col space-y-1">
                   <a
-                    href="tel:+919843110585"
+                    href="tel:+919842133807"
                     className="hover:text-white transition-colors"
                   >
-                    +91 98431 10585
+                    +91 98421 33807
                   </a>
                   <a
                     href="tel:+8618689244807"

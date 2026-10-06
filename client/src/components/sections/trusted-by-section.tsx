@@ -74,7 +74,7 @@ export default function TrustedBySection() {
             <div className="inline-flex flex-wrap items-center justify-center gap-8 md:gap-12 text-gray-600">
               <div className="flex items-center gap-4">
                 <div className="w-20 h-20 md:w-24 md:h-24 bg-imex-red/10 rounded-full flex items-center justify-center">
-                  <span className="text-3xl md:text-4xl font-bold text-imex-red">50+</span>
+                  <span className="text-3xl md:text-4xl font-bold text-imex-red">100+</span>
                 </div>
                 <div className="text-left">
                   <div className="text-xl font-bold text-gray-900">Clients</div>
