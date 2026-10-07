@@ -77,7 +77,7 @@ export default function ProjectsHospitals() {
               <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">Client Testimonial</h4>
                 <blockquote className="text-lg text-gray-600 italic">
-                  "IMEX transformed what could have been a logistical nightmare into a seamless experience. Their expertise in healthcare sourcing and attention to detail ensured we had everything we needed to open our doors on time."
+                  "IMEX Global transformed what could have been a logistical nightmare into a seamless experience. Their expertise in healthcare sourcing and attention to detail ensured we had everything we needed to open our doors on time."
                 </blockquote>
                 <p className="text-imex-red font-semibold mt-4">- Dr. Rajesh Kumar, Medical Director</p>
               </div>

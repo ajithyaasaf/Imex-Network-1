@@ -92,7 +92,7 @@ export default function ProjectsVillas() {
               <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">Client Testimonial</h4>
                 <blockquote className="text-lg text-gray-600 italic">
-                  "IMEX's ability to source premium products at competitive prices while maintaining impeccable quality standards helped us achieve exceptional profit margins. They're now our go-to partner for all developments."
+                  "IMEX Global's ability to source premium products at competitive prices while maintaining impeccable quality standards helped us achieve exceptional profit margins. They're now our go-to partner for all developments."
                 </blockquote>
                 <p className="text-imex-red font-semibold mt-4">- Sarah Al-Rashid, Property Developer</p>
               </div>

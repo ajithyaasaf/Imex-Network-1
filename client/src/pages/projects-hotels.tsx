@@ -92,7 +92,7 @@ export default function ProjectsHotels() {
               <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">Client Testimonial</h4>
                 <blockquote className="text-lg text-gray-600 italic">
-                  "IMEX understood our vision for a tropical paradise and delivered beyond expectations. Their attention to detail and ability to source unique, high-quality pieces made all the difference."
+                  "IMEX Global understood our vision for a tropical paradise and delivered beyond expectations. Their attention to detail and ability to source unique, high-quality pieces made all the difference."
                 </blockquote>
                 <p className="text-imex-red font-semibold mt-4">- Ahmed Hassan, Resort Owner</p>
               </div>

@@ -20,12 +20,12 @@ interface FAQItem {
 const knowledgeBase: FAQItem[] = [
   {
     keywords: ['hello', 'hi', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening'],
-    response: "Hello! Welcome to IMEX - your trusted partner in global sourcing! 👋 I'm here to help you with any questions about our services, projects, or how we can transform your space. How can I assist you today?",
-    quickReplies: ['Tell me about IMEX', 'What services do you offer?', 'Show me your projects', 'How do I get started?']
+    response: "Hello! Welcome to IMEX Global - your trusted partner in global sourcing! 👋 I'm here to help you with any questions about our services, projects, or how we can transform your space. How can I assist you today?",
+    quickReplies: ['Tell me about IMEX Global', 'What services do you offer?', 'Show me your projects', 'How do I get started?']
   },
   {
     keywords: ['about', 'who is imex', 'what is imex', 'company profile'],
-    response: "IMEX is a premium import/export and sourcing company that specializes in delivering complete turnkey project solutions across multiple industries. 🏢\n\n**What We Do:**\nWe serve as a strategic bridge between world-class Chinese manufacturers and global clients, providing comprehensive end-to-end services including:\n\n• **Sourcing & Procurement** from verified manufacturers in Foshan, China - the sourcing capital of the world\n• **Complete Project Solutions** for hotels, hospitals, villas, institutes, and commercial spaces\n• **Global Logistics** with seamless coordination from factory to final installation\n• **Quality Assurance** at every step with our on-ground teams\n\n**Our Reach:**\n📍 China (Foshan) - Direct manufacturer relationships\n📍 India (Chennai & Madurai) - Regional hubs for delivery and support\n\nWe handle everything from initial consultation to final installation, ensuring your project is completed on time, within budget, and exceeding expectations!",
+    response: "IMEX Global is a premium import/export and sourcing company that specializes in delivering complete turnkey project solutions across multiple industries. 🏢\n\n**What We Do:**\nWe serve as a strategic bridge between world-class Chinese manufacturers and global clients, providing comprehensive end-to-end services including:\n\n• **Sourcing & Procurement** from verified manufacturers in Foshan, China - the sourcing capital of the world\n• **Complete Project Solutions** for hotels, hospitals, villas, institutes, and commercial spaces\n• **Global Logistics** with seamless coordination from factory to final installation\n• **Quality Assurance** at every step with our on-ground teams\n\n**Our Reach:**\n📍 China (Foshan) - Direct manufacturer relationships\n📍 India (Chennai & Madurai) - Regional hubs for delivery and support\n\nWe handle everything from initial consultation to final installation, ensuring your project is completed on time, within budget, and exceeding expectations!",
     quickReplies: ['What services do you offer?', 'Show me your projects', 'Contact sales']
   },
   {
@@ -65,7 +65,7 @@ const knowledgeBase: FAQItem[] = [
   },
   {
     keywords: ['process', 'how it works', 'steps', 'procedure', 'journey', 'workflow'],
-    response: "The **IMEX Journey** is simple and efficient! 🚀\n\n1️⃣ **Consultation** - We understand your needs\n2️⃣ **Sourcing** - Find perfect manufacturers in China\n3️⃣ **Quality Check** - Rigorous inspection\n4️⃣ **Logistics** - Seamless shipping & customs\n5️⃣ **Delivery** - Timely arrival to your location\n6️⃣ **Installation** - Professional setup\n\n✅ 60% faster than traditional methods\n✅ 40% cost savings\n✅ 99.8% quality assurance",
+    response: "The **IMEX Global Journey** is simple and efficient! 🚀\n\n1️⃣ **Consultation** - We understand your needs\n2️⃣ **Sourcing** - Find perfect manufacturers in China\n3️⃣ **Quality Check** - Rigorous inspection\n4️⃣ **Logistics** - Seamless shipping & customs\n5️⃣ **Delivery** - Timely arrival to your location\n6️⃣ **Installation** - Professional setup\n\n✅ 60% faster than traditional methods\n✅ 40% cost savings\n✅ 99.8% quality assurance",
     quickReplies: ['Get started now', 'View services', 'See projects', 'Contact us']
   },
   {
@@ -85,7 +85,7 @@ const knowledgeBase: FAQItem[] = [
   },
   {
     keywords: ['start', 'begin', 'get started', 'first step', 'initiate', 'how to'],
-    response: "Excited to get started with IMEX? Here's how! 🎯\n\n**Step 1**: Share your project requirements\n**Step 2**: We'll provide a customized proposal\n**Step 3**: Review and approve the plan\n**Step 4**: We handle everything else!\n\nReady to transform your space? Let's connect you with our team!",
+    response: "Excited to get started with IMEX Global? Here's how! 🎯\n\n**Step 1**: Share your project requirements\n**Step 2**: We'll provide a customized proposal\n**Step 3**: Review and approve the plan\n**Step 4**: We handle everything else!\n\nReady to transform your space? Let's connect you with our team!",
     quickReplies: ['Contact us now', 'View services', 'See our process', 'Request a quote']
   },
   {
@@ -121,12 +121,12 @@ const knowledgeBase: FAQItem[] = [
   },
   {
     keywords: ['thanks', 'thank you', 'appreciate', 'grateful'],
-    response: "You're very welcome! 😊 It's my pleasure to help you learn more about IMEX. If you have any more questions or would like to start a project, feel free to ask or connect with our team!",
+    response: "You're very welcome! 😊 It's my pleasure to help you learn more about IMEX Global. If you have any more questions or would like to start a project, feel free to ask or connect with our team!",
     quickReplies: ['Contact us', 'View services', 'See projects', 'Request a quote']
   },
   {
     keywords: ['bye', 'goodbye', 'see you', 'talk later'],
-    response: "Thank you for chatting with me! 👋 I hope I've been helpful. Feel free to return anytime you have questions about IMEX's services. Have a wonderful day!",
+    response: "Thank you for chatting with me! 👋 I hope I've been helpful. Feel free to return anytime you have questions about IMEX Global's services. Have a wonderful day!",
     quickReplies: ['Contact us', 'Visit our website', 'View portfolio']
   }
 ];
@@ -203,9 +203,9 @@ export class ChatbotEngine {
     const fallbackResponse: ChatMessage = {
       id: randomUUID(),
       role: 'bot',
-      content: "I'd love to help you with that! While I didn't quite catch your specific question, I'm here to assist with:\n\n🏢 Information about IMEX\n📦 Our services and solutions\n🎯 Our project portfolio\n💬 Getting started with a project\n📍 Contact information\n\nCould you please rephrase your question or choose one of the topics above?",
+      content: "I'd love to help you with that! While I didn't quite catch your specific question, I'm here to assist with:\n\n🏢 Information about IMEX Global\n📦 Our services and solutions\n🎯 Our project portfolio\n💬 Getting started with a project\n📍 Contact information\n\nCould you please rephrase your question or choose one of the topics above?",
       timestamp: Date.now(),
-      quickReplies: ['About IMEX', 'Services', 'Projects', 'Get started', 'Contact us']
+      quickReplies: ['About IMEX Global', 'Services', 'Projects', 'Get started', 'Contact us']
     };
 
     if (conversationId) {

@@ -126,7 +126,7 @@ export default function TrustWallSection() {
             <blockquote className="text-2xl md:text-3xl font-medium text-gray-800 italic">
               "In 15 years, we've learned that trust isn't given – it's earned with every shipment, every relationship, and every promise kept."
             </blockquote>
-            <p className="mt-6 text-lg text-gray-600 font-semibold">— IMEX Team</p>
+            <p className="mt-6 text-lg text-gray-600 font-semibold">— IMEX Global Team</p>
           </div>
         </motion.div>
       </div>

@@ -31,9 +31,9 @@ export function ChatBot() {
       const welcomeMessage: ChatMessage = {
         id: 'welcome',
         role: 'bot',
-        content: "Hello! Welcome to IMEX - your trusted partner in global sourcing! 👋 I'm here to help you with any questions about our services, projects, or how we can transform your space. How can I assist you today?",
+        content: "Hello! Welcome to IMEX Global - your trusted partner in global sourcing! 👋 I'm here to help you with any questions about our services, projects, or how we can transform your space. How can I assist you today?",
         timestamp: Date.now(),
-        quickReplies: ['Tell me about IMEX', 'What services do you offer?', 'Show me your projects', 'How do I get started?']
+        quickReplies: ['Tell me about IMEX Global', 'What services do you offer?', 'Show me your projects', 'How do I get started?']
       };
       setMessages([welcomeMessage]);
     }
@@ -103,7 +103,7 @@ export function ChatBot() {
                 <Bot className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="font-bold text-lg" data-testid="text-chat-title">IMEX Assistant</h3>
+                <h3 className="font-bold text-lg" data-testid="text-chat-title">IMEX Global Assistant</h3>
                 <p className="text-xs text-white/80">Always here to help</p>
               </div>
             </div>

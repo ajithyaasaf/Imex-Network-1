@@ -77,7 +77,7 @@ export default function ProjectsInstitutes() {
               <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">Client Testimonial</h4>
                 <blockquote className="text-lg text-gray-600 italic">
-                  "IMEX delivered a world-class learning environment that sets us apart. Their understanding of educational needs and ability to source quality products within our budget was exceptional."
+                  "IMEX Global delivered a world-class learning environment that sets us apart. Their understanding of educational needs and ability to source quality products within our budget was exceptional."
                 </blockquote>
                 <p className="text-imex-red font-semibold mt-4">- Margaret Chen, School Principal</p>
               </div>

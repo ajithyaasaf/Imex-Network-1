@@ -95,7 +95,7 @@ export const clients: Client[] = [
     city: 'Madurai',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX transformed our vision into reality with impeccable attention to detail. Their end-to-end sourcing solutions exceeded our expectations for quality and timelines.',
+      quote: 'IMEX Global transformed our vision into reality with impeccable attention to detail. Their end-to-end sourcing solutions exceeded our expectations for quality and timelines.',
       author: 'Rajesh Kumar',
       position: 'General Manager, Courtyard by Marriott Madurai'
     }
@@ -107,7 +107,7 @@ export const clients: Client[] = [
     city: 'Madurai',
     type: 'Hotel',
     testimonial: {
-      quote: 'Working with IMEX was seamless. Their expertise in sourcing premium goods from China and managing the entire logistics made our hotel launch stress-free.',
+      quote: 'Working with IMEX Global was seamless. Their expertise in sourcing premium goods from China and managing the entire logistics made our hotel launch stress-free.',
       author: 'Priya Sharma',
       position: 'Director, Amika Hotel Madurai'
     }
@@ -119,7 +119,7 @@ export const clients: Client[] = [
     city: 'Madurai',
     type: 'Hotel',
     testimonial: {
-      quote: 'The craftsmanship and quality of items sourced by IMEX perfectly matched our luxury standards. Their professional approach is commendable.',
+      quote: 'The craftsmanship and quality of items sourced by IMEX Global perfectly matched our luxury standards. Their professional approach is commendable.',
       author: 'Venkatesh Iyer',
       position: 'Owner, Royal Court Madurai'
     }
@@ -131,7 +131,7 @@ export const clients: Client[] = [
     city: 'Madurai',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX delivered exceptional value without compromising on quality. Their understanding of hospitality requirements is outstanding.',
+      quote: 'IMEX Global delivered exceptional value without compromising on quality. Their understanding of hospitality requirements is outstanding.',
       author: 'Suresh Reddy',
       position: 'Managing Director, Heritage Residency'
     }
@@ -143,7 +143,7 @@ export const clients: Client[] = [
     city: 'Madurai',
     type: 'Hospital',
     testimonial: {
-      quote: 'For our 200-bed facility, IMEX provided durable, comfortable, and aesthetically pleasing equipment. Their healthcare expertise made all the difference.',
+      quote: 'For our 200-bed facility, IMEX Global provided durable, comfortable, and aesthetically pleasing equipment. Their healthcare expertise made all the difference.',
       author: 'Dr. Anand Krishnan',
       position: 'Director, Bharathi Infinity Hospital'
     }
@@ -155,7 +155,7 @@ export const clients: Client[] = [
     city: 'Coimbatore',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX handled our complete furnishing project with professionalism. From design consultation to final installation, everything was perfect.',
+      quote: 'IMEX Global handled our complete furnishing project with professionalism. From design consultation to final installation, everything was perfect.',
       author: 'Mahesh Patel',
       position: 'General Manager, Prince Gardens Hotel'
     }
@@ -167,7 +167,7 @@ export const clients: Client[] = [
     city: 'Tirunelveli',
     type: 'Hotel',
     testimonial: {
-      quote: 'The contemporary collection sourced by IMEX perfectly complemented our boutique hotel concept. Highly recommended!',
+      quote: 'The contemporary collection sourced by IMEX Global perfectly complemented our boutique hotel concept. Highly recommended!',
       author: 'Arun Vijay',
       position: 'Owner, Copper Leaf Hotel'
     }
@@ -179,7 +179,7 @@ export const clients: Client[] = [
     city: 'Tirunelveli',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX offered competitive pricing with superior quality. Their China sourcing expertise gave us access to premium products within our budget.',
+      quote: 'IMEX Global offered competitive pricing with superior quality. Their China sourcing expertise gave us access to premium products within our budget.',
       author: 'Karthik Ramesh',
       position: 'Director, Hotel Appletree'
     }
@@ -191,7 +191,7 @@ export const clients: Client[] = [
     city: 'Nagerkoil',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX provided us with stylish, durable fixtures that perfectly suited our modern hotel aesthetic. Their professionalism throughout the project was exceptional.',
+      quote: 'IMEX Global provided us with stylish, durable fixtures that perfectly suited our modern hotel aesthetic. Their professionalism throughout the project was exceptional.',
       author: 'Mohan Das',
       position: 'Owner, Hotel Lance'
     }
@@ -203,7 +203,7 @@ export const clients: Client[] = [
     city: 'Kanyakumari',
     type: 'Hotel',
     testimonial: {
-      quote: 'For our coastal property, IMEX sourced weather-resistant yet elegant outdoor seating. Their attention to our specific needs was remarkable.',
+      quote: 'For our coastal property, IMEX Global sourced weather-resistant yet elegant outdoor seating. Their attention to our specific needs was remarkable.',
       author: 'Lakshmi Menon',
       position: 'Owner, Hotel Sea View'
     }
@@ -215,7 +215,7 @@ export const clients: Client[] = [
     city: 'Kanyakumari',
     type: 'Hotel',
     testimonial: {
-      quote: 'Our beachfront property needed outfitting that could withstand coastal conditions while maintaining elegance. IMEX delivered exactly what we needed.',
+      quote: 'Our beachfront property needed outfitting that could withstand coastal conditions while maintaining elegance. IMEX Global delivered exactly what we needed.',
       author: 'Vijay Kumar',
       position: 'General Manager, The Seashore Hotel'
     }
@@ -227,7 +227,7 @@ export const clients: Client[] = [
     city: 'Kodaikanal',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX transformed our hill station resort with stunning pieces. Their project management was flawless from start to finish.',
+      quote: 'IMEX Global transformed our hill station resort with stunning pieces. Their project management was flawless from start to finish.',
       author: 'Ravi Chandran',
       position: 'General Manager, The Hamuse'
     }
@@ -239,7 +239,7 @@ export const clients: Client[] = [
     city: 'Rameshwaram',
     type: 'Hotel',
     testimonial: {
-      quote: 'Excellent service and beautiful interiors that our guests love. IMEX made our renovation project smooth and successful.',
+      quote: 'Excellent service and beautiful interiors that our guests love. IMEX Global made our renovation project smooth and successful.',
       author: 'Balaji Subramanian',
       position: 'Owner, Hotel Arjunaa'
     }
@@ -251,7 +251,7 @@ export const clients: Client[] = [
     city: 'Theni',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX provided us with premium quality furnishings that perfectly matched our business class hotel standards. Their service was exceptional.',
+      quote: 'IMEX Global provided us with premium quality furnishings that perfectly matched our business class hotel standards. Their service was exceptional.',
       author: 'Management Team',
       position: 'ABM Hotels & Resorts, Theni'
     }
@@ -263,7 +263,7 @@ export const clients: Client[] = [
     city: 'Tiruchirappalli',
     type: 'Hotel',
     testimonial: {
-      quote: 'Working with IMEX for our Tiruchirappalli property was a great experience. Their sourcing solutions met our global brand standards.',
+      quote: 'Working with IMEX Global for our Tiruchirappalli property was a great experience. Their sourcing solutions met our global brand standards.',
       author: 'Hotel Management',
       position: 'Courtyard by Marriott Tiruchirappalli'
     }
@@ -275,7 +275,7 @@ export const clients: Client[] = [
     city: 'Pudukkotai',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX delivered elegant and durable interiors for our hotel. Their attention to detail and quality is commendable.',
+      quote: 'IMEX Global delivered elegant and durable interiors for our hotel. Their attention to detail and quality is commendable.',
       author: 'Management Team',
       position: 'Hotel Saradha Grande, Pudukkotai'
     }
@@ -287,7 +287,7 @@ export const clients: Client[] = [
     city: 'Karur',
     type: 'Hotel',
     testimonial: {
-      quote: 'The collection sourced by IMEX added a royal touch to our hotel interiors. Excellent craftsmanship and timely delivery.',
+      quote: 'The collection sourced by IMEX Global added a royal touch to our hotel interiors. Excellent craftsmanship and timely delivery.',
       author: 'Hotel Management',
       position: 'Hotel The Royal Grand, Karur'
     }
@@ -299,7 +299,7 @@ export const clients: Client[] = [
     city: 'Karur',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX provided contemporary designs that enhanced our hotel ambiance. Their professional approach made the project seamless.',
+      quote: 'IMEX Global provided contemporary designs that enhanced our hotel ambiance. Their professional approach made the project seamless.',
       author: 'Hotel Management',
       position: 'KRV Meridian Hotel, Karur'
     }
@@ -311,7 +311,7 @@ export const clients: Client[] = [
     city: 'Ottanchathiram',
     type: 'Hotel',
     testimonial: {
-      quote: 'Elegant and sophisticated interiors from IMEX transformed our palace hotel. Their expertise in luxury sourcing is remarkable.',
+      quote: 'Elegant and sophisticated interiors from IMEX Global transformed our palace hotel. Their expertise in luxury sourcing is remarkable.',
       author: 'Palace Management',
       position: 'Brindhavan Palace, Ottanchathiram'
     }
@@ -323,7 +323,7 @@ export const clients: Client[] = [
     city: 'Madurai',
     type: 'Hospital',
     testimonial: {
-      quote: 'IMEX understood our healthcare requirements perfectly. Durable, comfortable, and hygienic equipment that serves our patients well.',
+      quote: 'IMEX Global understood our healthcare requirements perfectly. Durable, comfortable, and hygienic equipment that serves our patients well.',
       author: 'Hospital Administration',
       position: 'Guru Multispeciality Hospital, Madurai'
     }
@@ -335,7 +335,7 @@ export const clients: Client[] = [
     city: 'Kanyakumari',
     type: 'Resort',
     testimonial: {
-      quote: 'IMEX provided us with premium quality furnishings that perfectly matched our luxury coastal resort standards. Their service and sourcing capabilities are truly exceptional.',
+      quote: 'IMEX Global provided us with premium quality furnishings that perfectly matched our luxury coastal resort standards. Their service and sourcing capabilities are truly exceptional.',
       author: 'Management Team',
       position: 'Amaari Beach Resort, Kanyakumari'
     }
@@ -347,7 +347,7 @@ export const clients: Client[] = [
     city: 'Coimbatore',
     type: 'Resort',
     testimonial: {
-      quote: 'The craftsmanship and quality of items sourced by IMEX perfectly matched our luxury lifestyle community standards. Highly professional and reliable.',
+      quote: 'The craftsmanship and quality of items sourced by IMEX Global perfectly matched our luxury lifestyle community standards. Highly professional and reliable.',
       author: 'Management',
       position: "Ananya's Nana Nani Homes"
     }
@@ -359,7 +359,7 @@ export const clients: Client[] = [
     city: 'Madurai',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX delivered exceptional value without compromising on quality for our hotel interiors. Their understanding of the hospitality sector is outstanding.',
+      quote: 'IMEX Global delivered exceptional value without compromising on quality for our hotel interiors. Their understanding of the hospitality sector is outstanding.',
       author: 'Management Team',
       position: 'CR Grande, Madurai'
     }
@@ -371,7 +371,7 @@ export const clients: Client[] = [
     city: 'Coimbatore',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX offered competitive pricing with superior quality for our business hotel. Their project management from sourcing to delivery was flawless.',
+      quote: 'IMEX Global offered competitive pricing with superior quality for our business hotel. Their project management from sourcing to delivery was flawless.',
       author: 'Management',
       position: 'The Orbis Hotel, Coimbatore'
     }
@@ -383,7 +383,7 @@ export const clients: Client[] = [
     city: 'Theni',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX provided high-quality furnishing and decor for our event space. Their attention to detail helped us create a grand experience for our guests.',
+      quote: 'IMEX Global provided high-quality furnishing and decor for our event space. Their attention to detail helped us create a grand experience for our guests.',
       author: 'Management Team',
       position: 'BHB Mahal, Theni'
     }
@@ -395,7 +395,7 @@ export const clients: Client[] = [
     city: 'Kodaikanal',
     type: 'Hotel',
     testimonial: {
-      quote: 'The premium furniture and amenities sourced by IMEX perfectly complement our hill station luxury. Their logistical support was impressive.',
+      quote: 'The premium furniture and amenities sourced by IMEX Global perfectly complement our hill station luxury. Their logistical support was impressive.',
       author: 'General Manager',
       position: 'Hotel Kodai International'
     }
@@ -407,7 +407,7 @@ export const clients: Client[] = [
     city: 'Nagerkoil',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX delivered exceptionally elegant interiors that our guests admire. Their ability to source unique products is a huge plus.',
+      quote: 'IMEX Global delivered exceptionally elegant interiors that our guests admire. Their ability to source unique products is a huge plus.',
       author: 'Owner',
       position: 'Hotel Sahana Castle'
     }
@@ -419,7 +419,7 @@ export const clients: Client[] = [
     city: 'Karur',
     type: 'Hotel',
     testimonial: {
-      quote: 'Durable and stylish furnishings at a competitive price. IMEX is our trusted partner for all sourcing needs.',
+      quote: 'Durable and stylish furnishings at a competitive price. IMEX Global is our trusted partner for all sourcing needs.',
       author: 'Management',
       position: 'Sri Murugan Residency, Karur'
     }
@@ -431,7 +431,7 @@ export const clients: Client[] = [
     city: 'Rameshwaram',
     type: 'Hotel',
     testimonial: {
-      quote: 'The quality of materials and the service from IMEX exceeded our expectations. They made our outfitting project very successful.',
+      quote: 'The quality of materials and the service from IMEX Global exceeded our expectations. They made our outfitting project very successful.',
       author: 'Director',
       position: 'Star Palace, Rameshwaram'
     }
@@ -443,7 +443,7 @@ export const clients: Client[] = [
     city: 'Tirunelveli',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX delivered exceptional quality for our hotel project in Tirunelveli. Their professional approach made the entire process seamless.',
+      quote: 'IMEX Global delivered exceptional quality for our hotel project in Tirunelveli. Their professional approach made the entire process seamless.',
       author: 'Management',
       position: 'Afna Park, Tirunelveli'
     }
@@ -455,7 +455,7 @@ export const clients: Client[] = [
     city: 'Karaikudi',
     type: 'Education',
     testimonial: {
-      quote: 'The furniture and outfitting provided by IMEX created a vibrant and conducive learning environment for our students.',
+      quote: 'The furniture and outfitting provided by IMEX Global created a vibrant and conducive learning environment for our students.',
       author: 'Director',
       position: 'Chettinad Public School'
     }
@@ -467,7 +467,7 @@ export const clients: Client[] = [
     city: 'Rajapalayam',
     type: 'Hotel',
     testimonial: {
-      quote: 'IMEX is our go-to partner for premium furnishings. Their expertise in sourcing from global markets is unmatched.',
+      quote: 'IMEX Global is our go-to partner for premium furnishings. Their expertise in sourcing from global markets is unmatched.',
       author: 'Owner',
       position: 'Hotel Amil, Rajapalayam'
     }
@@ -479,7 +479,7 @@ export const clients: Client[] = [
     city: 'Tirunelveli',
     type: 'Hotel',
     testimonial: {
-      quote: 'Highly satisfied with the quality and aesthetics of the items delivered by IMEX. They truly understand hospitality standards.',
+      quote: 'Highly satisfied with the quality and aesthetics of the items delivered by IMEX Global. They truly understand hospitality standards.',
       author: 'General Manager',
       position: 'Hotel Palmyra Grand Suite'
     }
@@ -491,7 +491,7 @@ export const clients: Client[] = [
     city: 'Tirunelveli',
     type: 'Education',
     testimonial: {
-      quote: 'IMEX provided robust and ergonomic solutions for our educational complex. Their service is reliable and efficient.',
+      quote: 'IMEX Global provided robust and ergonomic solutions for our educational complex. Their service is reliable and efficient.',
       author: 'Administrative Head',
       position: 'SCAD Group of Institutions'
     }
@@ -503,7 +503,7 @@ export const clients: Client[] = [
     city: 'Sankarankovil',
     type: 'Hotel',
     testimonial: {
-      quote: 'The traditional yet elegant furnishings from IMEX perfectly complement our heritage theme. Their sourcing is top-notch.',
+      quote: 'The traditional yet elegant furnishings from IMEX Global perfectly complement our heritage theme. Their sourcing is top-notch.',
       author: 'Management',
       position: 'Hamshaveni Heritage'
     }
@@ -515,7 +515,7 @@ export const clients: Client[] = [
     city: 'Pudukkotai',
     type: 'Hotel',
     testimonial: {
-      quote: 'Durable products and great service. IMEX helped us achieve a premium look for our guest rooms within budget.',
+      quote: 'Durable products and great service. IMEX Global helped us achieve a premium look for our guest rooms within budget.',
       author: 'Director',
       position: 'SVS Grande, Pudukkotai'
     }

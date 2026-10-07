@@ -77,7 +77,7 @@ export default function ProjectsRetail() {
               <div className="bg-white rounded-2xl p-8 shadow-xl">
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">Client Testimonial</h4>
                 <blockquote className="text-lg text-gray-600 italic">
-                  "IMEX transformed our retail expansion from a daunting challenge into a seamless success. Their ability to deliver consistent quality across multiple locations simultaneously was truly remarkable."
+                  "IMEX Global transformed our retail expansion from a daunting challenge into a seamless success. Their ability to deliver consistent quality across multiple locations simultaneously was truly remarkable."
                 </blockquote>
                 <p className="text-imex-red font-semibold mt-4">- Priya Sharma, Retail Director</p>
               </div>
